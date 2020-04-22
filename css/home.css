@@ -62,6 +62,12 @@ header ul li a{
     align-self: center;
     margin-left: 50px;
 }
+
+.tracks ul{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+}
 .artists{
     height: 500px;
     width: 100%;
