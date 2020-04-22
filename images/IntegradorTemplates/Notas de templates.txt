@@ -1,13 +1,12 @@
 Home:
 	- Buscador en header
 	- Tag de home es el logo
+	- Tambien hay tag de home
 	- About
 	- Ayuda
-	- Usuario(?
 	- Filtro
 	- Banner con podcasts, artistas y tracks
 	- Desplegables de los 3 de abajo
-	- Playlists de usuarios
 	- Generos
 	- Albums
 	- Footer con reproduccion(?
