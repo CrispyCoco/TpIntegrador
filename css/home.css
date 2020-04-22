@@ -6,7 +6,10 @@ header{
     justify-content: space-around;
     align-items: center;
     position: fixed;
+    top: 0;
     z-index: 2001;
+    background-color: black;
+    margin-top: 0;
 }
 
 header img{
@@ -18,6 +21,7 @@ header img{
     height: 30px;
     width: 100px;
     border: solid 3px blue;
+    background-color: whitesmoke;
 }
 
 header ul{
@@ -35,12 +39,58 @@ header ul li{
 
 header ul li a{
     text-decoration: none;
-    color: black;
+    color: white;
     
 }
+
+/******************************* Container *******************************************/
+
 .container{
-    height: 500px;
+    margin-top: 100px;
 }
+
+.tracks{
+    height: 500px;
+    width: 100%;
+    border: solid 3px green;
+    display: flex;
+}
+
+.tracks img{
+    height: 400px;
+    width: 400px;
+    align-self: center;
+    margin-left: 50px;
+}
+.artists{
+    height: 500px;
+    width: 100%;
+    display: flex;
+    border: solid 3px green;
+}
+
+.artists img{
+    height: 400px;
+    width: 400px;
+    align-self: center;
+    margin-left: 50px;
+}
+
+.podcasts{
+    height: 500px;
+    width: 100%;
+    border: solid 3px green;
+    display: flex;
+}
+
+.podcasts img{
+    height: 400px;
+    width: 400px;
+    align-self: center;
+    margin-left: 50px;
+}
+
+/******************** Footer *************************/
 
 footer{
     display: flex;
@@ -64,5 +114,5 @@ footer ul li{
 footer ul li a{
     text-decoration: none;
     color: black;
+    text-transform: capitalize;
 }
-
