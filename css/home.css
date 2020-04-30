@@ -1,13 +1,15 @@
+body{
+    margin: 0;
+}
 header{
     display: flex;
     width: 100%;
     height: 100px;
-    border: solid 3px red;
     justify-content: space-around;
     align-items: center;
     position: fixed;
     top: 0;
-    z-index: 2001;
+    z-index: 2001; 
     background-color: black;
     margin-top: 0;
 }
@@ -19,9 +21,23 @@ header img{
 
 .buscador{
     height: 30px;
-    width: 100px;
-    border: solid 3px blue;
+    width: 300px;
     background-color: whitesmoke;
+    border-radius: 15px;
+    display: flex;
+}
+
+.buscador input{
+    width: 290px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    border: 0;
+}
+
+.buscador i{
+    width: 20px;
+    align-self: center;
+    margin-left: 2px;
 }
 
 header ul{
@@ -40,39 +56,85 @@ header ul li{
 header ul li a{
     text-decoration: none;
     color: white;
+    font-family: 'Muli', sans-serif;
     
 }
 
-/******************************* Container *******************************************/
+/******************************* General container  *******************************************/
 
 .container{
     margin-top: 100px;
+    margin-left: 0;
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: rgb(12, 11, 14);
 }
 
+.imgContainer{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    align-self: center;
+    position: relative;
+}
+
+.list{
+    width: 100%;
+    height: 380px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+
+} 
+/* ********************************* Tracks ***************************************************** */
 .tracks{
     height: 500px;
     width: 100%;
-    border: solid 3px green;
     display: flex;
 }
-
 .tracks img{
     height: 400px;
     width: 400px;
     align-self: center;
-    margin-left: 50px;
+}
+.tracks h3{
+    margin: 0;
+    position: absolute;
+    top: 170px;
+    left: 80px;
+    font-size: 50px;
+    color: whitesmoke;
+    font-family: 'Raleway', sans-serif;
 }
 
-.tracks ul{
-    display: flex;
-    flex-direction: column;
-    height: 400px;
+.trackBox{
+    width: 100%;
+    height: 10%;
+    display: grid;
+    grid-template-columns: 70% 15% 15%;
+    border: solid 1px gray;
 }
+
+.trackBox div{
+    padding-left: 10px;
+    padding-top: 10px;
+    font-family: 'Muli', sans-serif;
+    font-size: small;
+    font-weight: bold;
+}
+
+.trackBox a{
+    text-decoration: none;
+    color: white;
+}
+
+/* ********************************************** Artists ************************************************** */
 .artists{
     height: 500px;
     width: 100%;
     display: flex;
-    border: solid 3px green;
 }
 
 .artists img{
@@ -82,10 +144,26 @@ header ul li a{
     margin-left: 50px;
 }
 
+.artists img{
+    height: 400px;
+    width: 400px;
+    align-self: center;
+    margin: 0;
+}
+.artists h3{
+    margin: 0;
+    position: absolute;
+    top: 170px;
+    left: 80px;
+    font-size: 50px;
+    color: whitesmoke;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* ******************************************Podcasts*************************************************** */
 .podcasts{
     height: 500px;
     width: 100%;
-    border: solid 3px green;
     display: flex;
 }
 
@@ -96,16 +174,31 @@ header ul li a{
     margin-left: 50px;
 }
 
-/******************** Footer *************************/
+.podcasts img{
+    height: 400px;
+    width: 400px;
+    align-self: center;
+    margin: 0;
+}
+.podcasts h3{
+    margin: 0;
+    position: absolute;
+    top: 170px;
+    left: 80px;
+    font-size: 50px;
+    color: whitesmoke;
+    font-family: 'Raleway', sans-serif;
+}
+/*************************************** Footer *******************************************************/
 
 footer{
     display: flex;
     height: 100px;
     width: 100%;
-    border: solid 3px red;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+    background-color: black;
 }
 
 footer a img{
@@ -119,6 +212,11 @@ footer ul li{
 
 footer ul li a{
     text-decoration: none;
-    color: black;
+    color: white;
     text-transform: capitalize;
+    font-family: 'Muli', sans-serif;
+}
+
+@media only screen and (max-width: 768px){
+
 }
