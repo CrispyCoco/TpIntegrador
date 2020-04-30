@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+}
+header{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 2001; 
+    background-color: black;
+    margin-top: 0;
+}
+
+header img{
+    width: 105px;
+    height: 90px;
+}
+
+.buscador{
+    height: 30px;
+    width: 300px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    display: flex;
+}
+
+.buscador input{
+    width: 290px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    border: 0;
+}
+
+.buscador i{
+    width: 20px;
+    align-self: center;
+    margin-left: 2px;
+}
+
+header ul{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+    width: 500px;
+    justify-content: space-around;
+}
+
+header ul li{
+    list-style-type: none;
+    text-transform: capitalize;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Muli', sans-serif;
+    
+}
+
+.hover:hover{
+    color: rgb(75, 26, 171);
+}
