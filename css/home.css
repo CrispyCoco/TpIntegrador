@@ -46,6 +46,7 @@ header ul{
     margin-left: 0;
     width: 500px;
     justify-content: space-around;
+    padding: 0;
 }
 
 header ul li{
@@ -119,9 +120,14 @@ header ul li a{
     align-self: center;
     display: grid;
     grid-template-columns: 70% 15% 15%;
-    border: solid 1px gray;
+    border: solid 1px rgba(128, 128, 128, 0.199);
+    border-left: none;
+    border-right: none;
 }
 
+.trackBox:hover{
+    background-color: rgba(128, 128, 128, 0.26);
+}
 .trackBox div{
     padding-left: 10px;
     padding-top: 10px;
@@ -233,13 +239,17 @@ footer ul li a:hover{
 /* **************************************Tablet**************************************************** */
 @media only screen and (max-width: 768px){
     /* *********************** Header tablet *************************** */
+    header img{
+        height: 70px;
+        width: 90px;
+    }
     header ul{
-        width: 300px;
+        width: 350px;
         padding: 0;
     }
 
     .buscador{
-        width: 250px;
+        width: 200px;
     }
 
     /* *********************** General tablet *************************** */
