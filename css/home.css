@@ -61,10 +61,17 @@ header ul li a{
     
 }
 
+header ul li{
+    color: white;
+}
+
 .hover:hover{
     color: rgb(75, 26, 171);
 }
 
+header ul li:hover{
+    color: rgb(75, 26, 171);
+}
 /******************************* General container  *******************************************/
 
 .container{
@@ -83,6 +90,7 @@ header ul li a{
     display: flex;
     align-self: center;
     position: relative;
+    margin-left: 15px;
 }
 
 .list{
@@ -115,7 +123,7 @@ header ul li a{
 }
 
 .trackBox{
-    width: 90%;
+    width: 95%;
     height: 10%;
     align-self: center;
     display: grid;
@@ -267,10 +275,12 @@ footer ul li a:hover{
     .imgContainer h3{
         font-size: 30px;
         top: 150px;
+        margin: 0;
     }
 
     .list{
         width: 80%;
+        margin-top: 30px;
     }
 
     .trackBox{
@@ -287,15 +297,65 @@ footer ul li a:hover{
     .tracks{
         flex-direction: column;
         margin-top: 30px;
+        height: 750px;
     }
 
     .artists{
         flex-direction: column;
         margin-top: 30px;
+        height: 750px;
     }
 
     .podcasts{
         flex-direction: column;
         margin-top: 30px;
+        height: 750px;
+    }
+}
+
+/* **************************************Mobile**************************************************** */
+
+@media only screen and (max-width: 400px){
+    /* *********************** Header mobile *************************** */
+
+    .tags{
+        display: none;
+    }
+
+    header img{
+        height: 50px;
+        width: 70px;
+    }
+
+    .imgContainer{
+        height: 250px;
+        width: 250px;
+        margin: 0;
+    }
+    
+    .imgContainer img{
+        height: 250px;
+        width: 250px;
+        justify-self: center;
+    }
+
+    .list{
+        width: 90%;
+    }
+
+    .extraInfo{
+        display: none;
+    }
+
+    .tracks{
+        height: 700px;
+    }
+
+    .artists{
+        height: 700px;
+    }
+
+    .podcasts{
+        height: 700px;
     }
 }
