@@ -73,3 +73,56 @@ header ul li{
 header ul li:hover{
     color: rgb(75, 26, 171);
 }
+
+/* ************************************** General Container ****************************************** */
+
+.container{
+    width: 90%;
+}
+
+.separation{
+    width: 80%;
+    border: solid 3px lightblue;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.imgContainer{
+    display: flex;
+}
+
+.mainInfo{
+    display: flex
+}
+
+/* ************************************** Footer ****************************************** */
+
+footer{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: black;
+}
+
+footer a img{
+    width: 100px;
+    height: 40px;
+}
+
+footer ul li{
+    list-style-type: none;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+    font-family: 'Muli', sans-serif;
+}
+
+footer ul li a:hover{
+    font-weight: bold;
+}
