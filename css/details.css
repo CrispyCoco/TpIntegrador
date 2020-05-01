@@ -46,6 +46,7 @@ header ul{
     margin-left: 0;
     width: 500px;
     justify-content: space-around;
+    padding: 0;
 }
 
 header ul li{
@@ -60,7 +61,15 @@ header ul li a{
     
 }
 
+header ul li{
+    color: white;
+}
+
 .hover:hover{
+    color: rgb(75, 26, 171);
+}
+
+header ul li:hover{
     color: rgb(75, 26, 171);
 }
 
