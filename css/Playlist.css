@@ -266,3 +266,64 @@ footer ul li a{
 footer ul li a:hover{
     font-weight: bold;
 }
+
+@media only screen and (max-width: 768px){
+    header img{
+        height: 70px;
+        width: 90px;
+    }
+    header ul{
+        width: 350px;
+        padding: 0;
+    }
+
+    .buscador{
+        width: 200px;
+    }
+
+    .buscador input{
+        width: 170px;
+    }
+    
+    .track{
+        grid-template-columns: 10% 50% 15% 15% 10%;
+    }
+
+    .separation{
+        grid-template-rows: 50% 50%;
+        grid-template-columns: none;
+    }
+
+    .imgContainer img{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    .tags{
+        display: none;
+    }
+
+    header img{
+        height: 50px;
+        width: 70px;
+    }
+    
+    .separation{
+        margin-bottom: 40px;
+    }
+
+    .separation img{
+        height: 80%;
+    }
+    .track{
+        grid-template-columns: 15% 70% 20%;
+    }
+
+    .imgContainer img{
+        width: 100%;
+    }
+    .notMobile{
+        display: none;
+    }
+}
