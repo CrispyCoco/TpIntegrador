@@ -186,6 +186,13 @@ header ul li:hover{
     font-family: 'Raleway', sans-serif;
 }
 
+.artists .trackBox{
+    grid-template-columns: 85% 15%;
+}
+
+.artists .mainInfo{
+    color: gray;
+}
 /* ******************************************Podcasts*************************************************** */
 .podcasts{
     height: 500px;
