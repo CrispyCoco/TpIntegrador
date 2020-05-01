@@ -21,23 +21,24 @@ header img{
 
 .buscador{
     height: 30px;
-    width: 300px;
+    width: 310px;
     background-color: whitesmoke;
     border-radius: 15px;
     display: flex;
+    justify-content: space-between;
 }
 
 .buscador input{
-    width: 290px;
+    width: 280px;
     background-color: whitesmoke;
     border-radius: 15px;
     border: 0;
 }
 
 .buscador i{
-    width: 20px;
+    width: 10px;
     align-self: center;
-    margin-left: 2px;
+    margin-left: 5px;
 }
 
 header ul{
