@@ -176,6 +176,10 @@ header ul li:hover{
     align-self: center;
     margin: 0;
 }
+
+.artists .trackBox{
+    grid-template-columns: 85% 15%;
+}
 .artists h3{
     margin: 0;
     position: absolute;
