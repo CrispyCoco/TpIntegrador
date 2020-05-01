@@ -73,3 +73,77 @@ header ul li{
 header ul li:hover{
     color: rgb(75, 26, 171);
 }
+
+.container > div {
+    padding: 20px;
+}
+
+.player {
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid 1px rgba(128, 128, 128, 0.199);
+}
+
+.player div {
+    margin: 20px;
+}
+
+.player .playlist-image {
+    max-width: 200px;
+}
+.player .playlist-image img{
+    height: 200px;
+    width: 200px;
+    margin-bottom: -30px;
+}
+
+.player .playlist-image h3{
+    margin: 0;
+    position: relative;
+    width: 200px;
+    top: -100px;
+    text-align: center;
+    font-size: 30px;
+    color: whitesmoke;
+    font-family: 'Raleway', sans-serif;
+}
+
+.player .playlist-info {
+    color: whitesmoke;
+    font-family: 'Raleway', sans-serif;
+}
+
+.player .playlist-info .playlist-actions {
+    margin: 0;
+}
+
+.player .playlist-info .playlist-actions button{
+    background-color: #555555; /* Black */
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-right: 15px;
+}
+
+.track-list {
+    font-family: 'Muli', sans-serif;
+    color: white;
+}
+
+.track-list .header {
+    display: grid;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    grid-template-columns: 40% 20% 20% 20%;
+    padding: 10px 20px;
+}
+
+.track-list .track {
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+    padding: 10px 20px;
+}
