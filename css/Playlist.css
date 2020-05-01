@@ -153,11 +153,12 @@ header ul li:hover{
     font-size: 30px;
     margin-left: 20px;
     margin-right: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
     padding-top: 2px;
     padding-bottom: 2px;
     border-radius: 30px;
+    background-color: rgb(75, 26, 171);
 }
 
 #more{
@@ -206,6 +207,33 @@ header ul li:hover{
     text-decoration: none;
     font-family: 'Muli', sans-serif;
     margin-left: 20px;
+}
+
+/* ************************************** Animations *************************************** */
+
+#add i:hover{
+    color: rgb(75, 26, 171);
+}
+
+#play:hover{
+    background-color: rgb(131, 106, 182);
+}
+
+#more i:hover{
+    color: rgb(169, 148, 211);
+}
+
+.track:hover{
+    background-color: rgba(128, 128, 128, 0.26);
+}
+
+.tag a:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.tag i:hover{
+    color: rgb(75, 26, 171);
 }
 /* ************************************** Footer ****************************************** */
 
