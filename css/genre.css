@@ -73,12 +73,18 @@ header ul li{
 header ul li:hover{
     color: rgb(75, 26, 171);
 }
+/* CONTAAAAAIIIINNNNEEERRRR */
 
 .container{
     margin-top: 100px;
     height:100px ;
 }
 
+.container img{
+    
+}
+
+/* FOOOOTEEEEEERRRRRRRR */
 footer{
     display: flex;
     height: 100px;
@@ -87,6 +93,9 @@ footer{
     align-items: center;
     justify-content: flex-end;
     background-color: black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }
 
 footer a img{

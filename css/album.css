@@ -76,7 +76,7 @@ header ul li:hover{
 /* COANTAINEEEEEEEEERR */
 
 .container{
-    background-color: yellow;
+    background-color:  rgb(12, 11, 14);
   
 }
 
@@ -84,14 +84,16 @@ header ul li:hover{
     position: relative;
     top: 102px;
     left: 20px;
-    border: solid 2px black;
+    border: solid 2px white;
 }
 .container h3{
     position: relative;
     left: 267px;
     top: -151px;
-    border: solid 2px black;
+    border: solid 2px white;
     width: fit-content;
+    color: white
+    font-family: 'Raleway', sans-serif;
 }
 
 .container h4{
@@ -100,6 +102,8 @@ header ul li:hover{
     left: 268px;
     border: solid 2px;
     width: fit-content;
+    color: white
+    font-family: 'Muli', sans-serif;
 }
 
 .container h5{
@@ -108,6 +112,7 @@ header ul li:hover{
     left: 267px;
     border: solid 2px;
     width: fit-content;
+    color: white
 }
 
 p{
@@ -115,19 +120,19 @@ p{
     top: -189px;
     left: 267px;
     height: 111px;
-    
+    color: white;
 }
 
 .music ul{
     columns: 2;
     -webkit-columns: 2;
     -moz-columns: 2;
-    border: solid black;
+    border: solid white;
     width: 500px;
     position: relative;
     top: -280px;
     left: 264px;
-
+    color: white
 }
 /* FOOTEERRRRRRRR */
 
