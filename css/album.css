@@ -21,23 +21,24 @@ header img{
 
 .buscador{
     height: 30px;
-    width: 300px;
+    width: 310px;
     background-color: whitesmoke;
     border-radius: 15px;
     display: flex;
+    justify-content: space-between;
 }
 
 .buscador input{
-    width: 290px;
+    width: 280px;
     background-color: whitesmoke;
     border-radius: 15px;
     border: 0;
 }
 
 .buscador i{
-    width: 20px;
+    width: 10px;
     align-self: center;
-    margin-left: 2px;
+    margin-left: 5px;
 }
 
 header ul{
@@ -72,67 +73,63 @@ header ul li{
 header ul li:hover{
     color: rgb(75, 26, 171);
 }
-
-/* ********************************************** General container ********************************** */
+/* COANTAINEEEEEEEEERR */
 
 .container{
-    margin-top: 100px;
-    margin-left: 0;
-    margin-left: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(12, 11, 14);
+    background-color: yellow;
+  
 }
 
-.general{
-    /* border: solid 3px red; */
-    width: 100%;
-    height: 500px;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    border-bottom: solid 3px rgba(128, 128, 128, 0.26);
-}
-
-.imgContainer{
-    /* border: solid 2px lightblue; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.imgContainer img{
-    height: 80%;
-    width: 80%;
-
-}
-
-.info h3{
-    font-family: 'Raleway', sans-serif;
-    color: white;
-    font-size: 30px;
+.container img{
     position: relative;
-    left: 30px;
-    top: 40px;
+    top: 102px;
+    left: 20px;
+    border: solid 2px black;
+}
+.container h3{
+    position: relative;
+    left: 267px;
+    top: -151px;
+    border: solid 2px black;
+    width: fit-content;
 }
 
-.info{
-    display: grid;
-    grid-template-rows: 1fr 2fr;
-}
-.description{
-    /* border: solid 2px green; */
-    width: 80%;
-    height: 200px;
-    margin-top: 40px;
-    margin-left: 30px;
-    background-color: rgb(73, 73, 73);
+.container h4{
+    position: relative;
+    top: -164px;
+    left: 268px;
+    border: solid 2px;
+    width: fit-content;
 }
 
-.description p{
-    color: white;
-    font-family: 'Muli', sans-serif;
+.container h5{
+    position: relative;
+    top: -177px;
+    left: 267px;
+    border: solid 2px;
+    width: fit-content;
 }
 
-/* ****************************************** Footer ************************************************ */
+p{
+    position: relative;
+    top: -189px;
+    left: 267px;
+    height: 111px;
+    
+}
+
+.music ul{
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    border: solid black;
+    width: 500px;
+    position: relative;
+    top: -280px;
+    left: 264px;
+
+}
+/* FOOTEERRRRRRRR */
 
 footer{
     display: flex;
@@ -142,6 +139,9 @@ footer{
     align-items: center;
     justify-content: flex-end;
     background-color: black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }
 
 footer a img{
