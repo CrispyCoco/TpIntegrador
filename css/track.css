@@ -85,6 +85,120 @@ header ul li:hover{
     background-color: rgb(12, 11, 14);
 }
 
+.detail{
+    width: 800px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0;
+    margin-left: 40px;
+}
+
+.imgContainer{
+    width: 100%;
+    height: 100%px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.overImage{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    z-index: 20;
+}
+
+.imagen{
+    width: 90%;
+    height: 90%;
+}
+
+.info h3{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 60px;
+    margin-top: 40px;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.info{
+    height: 100%;
+    width: 100%;
+}
+
+.moreInfo{
+    width: 90%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.artist{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: gray;
+    font-family: 'Muli', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.sideBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    font-family: 'Muli', sans-serif;
+    font-size: 20px;
+}
+
+.album{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: gray;
+    font-family: 'Muli', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.info div h5{
+    font-family: 'Muli', sans-serif;
+    font-size: 20px;
+    color: rgb(160, 160, 160);
+}
+
+.duration{
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    justify-self: left;
+}
+
+.button{
+    width: 100%;
+    height: 50%;
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+}
+.add{
+    color: white;
+    text-decoration: none;
+    font-family: 'Muli', sans-serif;
+    background-color: rgb(75, 26, 171);
+    font-size: 30px;
+    align-self: flex-end;
+    margin-bottom: 80px;
+    padding: 6px 20px;
+    border-radius: 30px;
+}
+/* ********************************* Footer **************************************** */
 footer{
     display: flex;
     height: 100px;
