@@ -125,6 +125,55 @@
 @media only screen and (max-width: 768px){
     .detail{
         width: 100%;
+        height: 700px;
         margin: 0em;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        grid-template-columns: none;
+        grid-template-rows: 50% 50%;
+    }
+
+    .imgContainer{
+        margin-bottom: 20px;
+    }
+    .imagen{
+        width: 60%;
+        height: 100%;
+    }
+
+    .moreInfo{
+        justify-content: flex-start;
+        margin-right: 0;
+        margin-left: 60px;
+    }
+
+    .duration{
+        justify-content: flex-start;
+        margin-left: 60px;
+    }
+    .duration h5{
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    *{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .imagen{
+        height: 80%;
+    }
+    .moreInfo{
+        margin-left: 35px;
+    }
+    .duration{
+        margin-right: 0;
+        margin-left: 30px;
+    }
+
+    .info h3{
+        margin-left: 30px;
     }
 }
