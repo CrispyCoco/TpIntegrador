@@ -93,7 +93,7 @@ header ul li:hover{
     border: solid 2px white;
     width: fit-content;
     color: white
-    font-family: 'Raleway', sans-serif;
+    
 }
 
 .container h4{
@@ -103,7 +103,7 @@ header ul li:hover{
     border: solid 2px;
     width: fit-content;
     color: white
-    font-family: 'Muli', sans-serif;
+    
 }
 
 .container h5{
