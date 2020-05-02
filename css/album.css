@@ -1,170 +1,98 @@
-body{
-    margin: 0;
+.container{
+    margin-top: 100px;
+    margin-left: 0;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(12, 11, 14);
+    width: 100%;
 }
-header{
+
+.content{
+    width: 800px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0;
+    margin-left: 40px;
+}
+
+.imgContainer{
+    width: 100%;
+    height: 100%px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.content img{
+    width: 90%;
+    height: 90%;
+}
+
+.info{
+    height: 100%;
+    width: 100%;
+}
+
+.info h3{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 60px;
+    margin-top: 40px;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.info h5{
+    font-family: 'Muli', sans-serif;
+    font-size: 10px;
+    color: gray;
+    margin-right: 50px;
+}
+
+.moreInfo{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.artist{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: gray;
+    font-family: 'Muli', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 60px;
+}
+
+.music{
     display: flex;
     width: 100%;
-    height: 100px;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    z-index: 2001; 
-    background-color: black;
-    margin-top: 0;
-}
-
-header img{
-    width: 105px;
-    height: 90px;
-}
-
-.buscador{
-    height: 30px;
-    width: 310px;
-    background-color: whitesmoke;
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.buscador input{
-    width: 280px;
-    background-color: whitesmoke;
-    border-radius: 15px;
-    border: 0;
-}
-
-.buscador i{
-    width: 10px;
-    align-self: center;
-    margin-left: 5px;
-}
-
-header ul{
-    display: flex;
-    flex-direction: row;
-    margin-left: 0;
-    width: 500px;
-    justify-content: space-around;
-    padding: 0;
-}
-
-header ul li{
-    list-style-type: none;
-    text-transform: capitalize;
-}
-
-header ul li a{
-    text-decoration: none;
-    color: white;
-    font-family: 'Muli', sans-serif;
-    
-}
-
-header ul li{
-    color: white;
-}
-
-.hover:hover{
-    color: rgb(75, 26, 171);
-}
-
-header ul li:hover{
-    color: rgb(75, 26, 171);
-}
-/* COANTAINEEEEEEEEERR */
-
-.container{
-    background-color:  rgb(12, 11, 14);
-  
-}
-
-.container img{
-    position: relative;
-    top: 102px;
-    left: 20px;
-    border: solid 2px white;
-}
-.container h3{
-    position: relative;
-    left: 267px;
-    top: -151px;
-    border: solid 2px white;
-    width: fit-content;
-    color: white
-    
-}
-
-.container h4{
-    position: relative;
-    top: -164px;
-    left: 268px;
-    border: solid 2px;
-    width: fit-content;
-    color: white
-    
-}
-
-.container h5{
-    position: relative;
-    top: -177px;
-    left: 267px;
-    border: solid 2px;
-    width: fit-content;
-    color: white
-}
-
-p{
-    position: relative;
-    top: -189px;
-    left: 267px;
-    height: 111px;
-    color: white;
 }
 
 .music ul{
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
-    border: solid white;
-    width: 500px;
-    position: relative;
-    top: -280px;
-    left: 264px;
-    color: white
-}
-/* FOOTEERRRRRRRR */
-
-footer{
-    display: flex;
-    height: 100px;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    background-color: black;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-}
-
-footer a img{
-    width: 100px;
-    height: 40px;
-}
-
-footer ul li{
+    color: white;
     list-style-type: none;
 }
 
-footer ul li a{
-    text-decoration: none;
+.music ul li a{
     color: white;
-    text-transform: capitalize;
+    text-decoration: none;
     font-family: 'Muli', sans-serif;
 }
 
-footer ul li a:hover{
-    font-weight: bold;
+@media only screen and (max-width: 768px){
+    .detail{
+        width: 100%;
+        margin: 0em;
+    }
+
+    
 }
