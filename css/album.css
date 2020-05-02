@@ -24,16 +24,13 @@
     align-items: center;
     justify-content: center;
     position: relative;
-<<<<<<< HEAD
-    left: 267px;
+    /* left: 267px;
     top: -151px;
     border: solid 2px white;
     width: fit-content;
-    color: white
+    color: white */
     
     
-=======
->>>>>>> af3de4ae77b77c8cc25e273e504ff3bdde2e46e7
 }
 
 .content img{
