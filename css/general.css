@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+}
+header{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 2001; 
+    background-color: black;
+    margin-top: 0;
+}
+
+header img{
+    width: 105px;
+    height: 90px;
+}
+
+.buscador{
+    height: 30px;
+    width: 310px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buscador input{
+    width: 280px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    border: 0;
+}
+
+.buscador i{
+    width: 10px;
+    align-self: center;
+    margin-left: 5px;
+}
+
+header ul{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+    width: 500px;
+    justify-content: space-around;
+    padding: 0;
+}
+
+header ul li{
+    list-style-type: none;
+    text-transform: capitalize;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Muli', sans-serif;
+
+}
+
+header ul li{
+    color: white;
+}
+
+.hover:hover{
+    color: rgb(75, 26, 171);
+}
+
+header ul li:hover{
+    color: rgb(75, 26, 171);
+}
+
+footer{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: black;
+}
+
+footer a img{
+    width: 100px;
+    height: 40px;
+}
+
+footer ul li{
+    list-style-type: none;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+    font-family: 'Muli', sans-serif;
+}
+
+footer ul li a:hover{
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 768px){
+    header img{
+        height: 70px;
+        width: 90px;
+    }
+    header ul{
+        width: 350px;
+        padding: 0;
+    }
+
+    .buscador{
+        width: 200px;
+    }
+
+    .buscador input{
+        width: 170px;
+    }
+
+}
+
+@media only screen and (max-width: 420px){
+    .tags{
+        display: none;
+    }
+
+    header img{
+        height: 50px;
+        width: 70px;
+    }
+}

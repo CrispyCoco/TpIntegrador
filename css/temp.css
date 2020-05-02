@@ -1,0 +1,11 @@
+.music ul{
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    border: solid white;
+    width: 500px;
+    position: relative;
+    top: -280px;
+    left: 264px;
+    color: white
+}
