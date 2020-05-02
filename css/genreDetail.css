@@ -85,6 +85,46 @@ header ul li:hover{
     background-color: rgb(12, 11, 14);
 }
 
+.container img{
+    width: 300px;
+    position: relative;
+    top: -77px;
+    margin-left: 20px;
+
+}
+
+.container h3{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    position: relative;
+    top: -397px;
+    left: 342px;
+}
+
+.container h4{
+    color: white;
+    font-family: 'Muli', sans-serif;
+    position: relative;
+    top: -417px;
+    left: 339px;
+
+}
+
+.artists img{
+    width: 150px;
+    height: 100px;
+}
+
+.artists h3{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+
+
+/* FOOOTEEERRRRRRRRR */
 footer{
     display: flex;
     height: 100px;
@@ -93,6 +133,9 @@ footer{
     align-items: center;
     justify-content: flex-end;
     background-color: black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }
 
 footer a img{
