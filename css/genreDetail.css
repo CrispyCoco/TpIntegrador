@@ -1,161 +1,69 @@
-body{
-    margin: 0;
-}
-header{
-    display: flex;
-    width: 100%;
-    height: 100px;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    z-index: 2001; 
-    background-color: black;
-    margin-top: 0;
-}
-
-header img{
-    width: 105px;
-    height: 90px;
-}
-
-.buscador{
-    height: 30px;
-    width: 310px;
-    background-color: whitesmoke;
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.buscador input{
-    width: 280px;
-    background-color: whitesmoke;
-    border-radius: 15px;
-    border: 0;
-}
-
-.buscador i{
-    width: 10px;
-    align-self: center;
-    margin-left: 5px;
-}
-
-header ul{
-    display: flex;
-    flex-direction: row;
-    margin-left: 0;
-    width: 500px;
-    justify-content: space-around;
-    padding: 0;
-}
-
-header ul li{
-    list-style-type: none;
-    text-transform: capitalize;
-}
-
-header ul li a{
-    text-decoration: none;
-    color: white;
-    font-family: 'Muli', sans-serif;
-    
-}
-
-header ul li{
-    color: white;
-}
-
-.hover:hover{
-    color: rgb(75, 26, 171);
-}
-
-header ul li:hover{
-    color: rgb(75, 26, 171);
-}
-/******************************* General container  *******************************************/
-
 .container{
     margin-top: 100px;
     margin-left: 0;
     margin-left: 0;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     background-color: rgb(12, 11, 14);
-}
-
-.container img{
-    width: 300px;
-    position: relative;
-    top: -77px;
-    margin-left: 20px;
-
-}
-
-.container h3{
-    font-family: 'Raleway', sans-serif;
-    color: white;
-    position: relative;
-    top: -397px;
-    left: 342px;
-}
-
-.container h4{
-    color: white;
-    font-family: 'Muli', sans-serif;
-    position: relative;
-    top: -417px;
-    left: 339px;
-
-}
-
-.artists img{
-    width: 150px;
-    height: 100px;
-}
-
-
-
-.artists h3{
-    color: white;
-    font-family: 'Raleway', sans-serif;
-}
-
-
-
-
-
-/* FOOOTEEERRRRRRRRR */
-footer{
-    display: flex;
-    height: 100px;
     width: 100%;
-    flex-direction: row;
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.content{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 800px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0;
+    margin-left: 40px;
+}
+
+.imgContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
     align-items: center;
-    justify-content: flex-end;
-    background-color: black;
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    justify-content: center;
+    position: relative;
 }
 
-footer a img{
-    width: 100px;
-    height: 40px;
+.imgContainer img{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    z-index: 20;
 }
 
-footer ul li{
-    list-style-type: none;
+.info{
+    height: 100%;
+    width: 100%;
 }
 
-footer ul li a{
-    text-decoration: none;
+.info h3{
     color: white;
-    text-transform: capitalize;
-    font-family: 'Muli', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 60px;
+    margin-top: 40px;
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
-footer ul li a:hover{
-    font-weight: bold;
+p{
+    color: white;
+    font-family: 'Muli',sans-serif;
+    margin-left: 10px;
+    margin-top: 60px;
+}
+
+@media only screen and (max-width: 768px){
+    .detail{
+        width: 100%;
+        margin: 0em;
+    }
+
+    
 }
