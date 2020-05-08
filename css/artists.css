@@ -1,96 +1,163 @@
 .container{
     margin-top: 100px;
-    margin-left: 0;
-    margin-left: 0;
     display: flex;
-    flex-direction: column;
     background-color: rgb(12, 11, 14);
     width: 100%;
+    align-items: center;
 }
 
 .content{
-    width: 800px;
-    height: 553px;
+    width: 700px;
+    height: 445px;
     display: grid;
     grid-template-columns: 50% 50%;
     margin: 0;
     margin-left: 40px;
+    padding-bottom: 40px;
+    padding-top: 40px;
 }
 
 .imgContainer{
     width: 100%;
-    height: 100%px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
-.content img{
-    width: 90%;
-    height: 100%;
-    margin-top: 61px;
+.imgContainer img{
+    height: 60%;
+    width: 100%;
+    margin-bottom: 60px;
 }
 
 .info{
     height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.headline{
     width: 100%;
 }
-
-.content h3{
+.headline h3{
     color: white;
     font-family: 'Raleway', sans-serif;
-    margin-left: -4px;
-    margin-top: 42px;
     font-size: 40px;
-    margin-bottom: 10px;
+    width: 100%;
+    margin: 0;
+    margin-top: 30px;
+    margin-left: 20px;
 }
 
-.content h4{
+.headline h4{
     font-family: 'Muli', sans-serif;
     font-size: 18px;
     color: gray;
-    margin-right: 50px;
-    margin-top: -123px;
-    margin-left: 396px;
+    margin: 0;
+    margin-left: 20px;
 }
-
-.moreInfo{
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
-}
-
-.artist{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    color: gray;
-    font-family: 'Muli', sans-serif;
-    text-decoration: none;
-    font-size: 20px;
-    margin-right: 60px;
-}
-
 .musica{
     display: flex;
     width: 100%;
+    flex-direction: column;
+}
+
+.musica h5{
+    font-family: 'Muli', sans-serif;
+    font-size: 18px;
+    color: gray;
+    margin-left: 20px;
+
 }
 
 .musica ul{
     color: white;
     list-style-type: none;
     font-family: 'Muli', sans-serif;
-    margin-left: -42px;
-    position: relative;
-    top: -91px;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
 }
 
 .musica ul li a{
     color: white;
     text-decoration: none;
     font-family: 'Muli', sans-serif;
+}
+
+.musica ul li a:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px){
+    .content{
+        width: 100%;
+        height: 700px;
+        margin: 0em;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        grid-template-columns: none;
+        grid-template-rows: 50% 50%;
+    }
+
+    .imgContainer{
+        margin-bottom: 20px;
+    }
+    .imgContainer img{
+        width: 60%;
+        height: 100%;
+    }
+
+    .info{
+        justify-content: center;
+    }
+
+    .info h3{
+        margin-left: 0;
+    }
+
+    .info h4{
+        margin-left: 60px;
+    }
+    .musica{
+        align-items: center;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .musica h5{
+        margin-left: 0;
+        width: 50%;
+    }
+    .musica ul{
+        margin-left: 0;
+        width: 50%;
+        text-align: center;
+        margin-right: 30px;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    .imgContainer img{
+        height: 60%;
+        padding-bottom: 0;
+    }
+
+    .info{
+        width: 100%;
+    }
+
+    .info h3{
+        margin-left: 0;
+    }
+
+    .info h4{
+        margin-left: 70px;
+    }
+    .musica{
+        width: 100%;
+        margin: 0;
+    }
 }
