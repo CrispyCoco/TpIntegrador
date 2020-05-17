@@ -1,4 +1,4 @@
-.container{
+.container-genre{
     margin-top: 100px;
     margin-left: 0;
     margin-left: 0;
@@ -6,12 +6,12 @@
     flex-direction: column;
     background-color: rgb(12, 11, 14);
     width: 100%;
-    display: flex;
+    display: none;
     padding-top: 40px;
     padding-bottom: 40px;
 }
 
-.content{
+.genre{
     margin-top: 30px;
     margin-bottom: 30px;
     width: 800px;
@@ -22,7 +22,7 @@
     margin-left: 40px;
 }
 
-.imgContainer{
+.genre .imgContainer{
     width: 100%;
     height: 100%;
     display: flex;
@@ -31,19 +31,19 @@
     position: relative;
 }
 
-.imgContainer img{
+.genre .imgContainer img{
     width: 90%;
     height: 90%;
     position: absolute;
     z-index: 20;
 }
 
-.info{
+.genre .info{
     height: 100%;
     width: 100%;
 }
 
-.info h3{
+.genre .info h3{
     color: white;
     font-family: 'Raleway', sans-serif;
     margin-left: 60px;
@@ -52,7 +52,7 @@
     margin-bottom: 10px;
 }
 
-p{
+.genre p{
     color: white;
     font-family: 'Muli',sans-serif;
     margin-left: 10px;
@@ -60,7 +60,7 @@ p{
 }
 
 @media only screen and (max-width: 768px){
-    .content{
+    .genre{
         width: 100%;
         height: 700px;
         margin: 0em;
@@ -70,46 +70,42 @@ p{
         grid-template-rows: 50% 50%;
     }
 
-    .imgContainer{
+    .genre .imgContainer{
         margin-bottom: 20px;
     }
-    .imgContainer img{
+    .genre .imgContainer img{
         width: 60%;
         height: 100%;
     }
 
-    .info{
+    .genre .info{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    h3{
+    .genre h3{
         margin-right: 50px;
     }
-    p{
+    .genre p{
         width: 60%;
         margin-top: 40px;
     }
 }
 
 @media only screen and (max-width: 420px){
-    *{
-        margin-left: 0;
-        margin-right: 0;
-    }
 
-    .imagen{
+    .genre .imagen{
         height: 80%;
     }
-    .moreInfo{
+    .genre .moreInfo{
         margin-left: 35px;
     }
-    .duration{
+    .genre .duration{
         margin-right: 0;
         margin-left: 30px;
     }
 
-    .info h3{
+    .genre .info h3{
         margin-left: 30px;
     }
 }

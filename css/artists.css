@@ -1,12 +1,12 @@
-.container{
+.container-artist{
     margin-top: 100px;
-    display: flex;
+    display: none;
     background-color: rgb(12, 11, 14);
     width: 100%;
     align-items: center;
 }
 
-.content{
+.artist{
     width: 700px;
     height: 445px;
     display: grid;
@@ -17,7 +17,7 @@
     padding-top: 40px;
 }
 
-.imgContainer{
+.artist .imgContainer{
     width: 100%;
     height: 100%;
     display: flex;
@@ -25,22 +25,22 @@
     justify-content: center;
 }
 
-.imgContainer img{
+.artist .imgContainer img{
     height: 60%;
     width: 100%;
     margin-bottom: 60px;
 }
 
-.info{
+.artist .info{
     height: 100%;
     display: grid;
     grid-template-rows: 1fr 2fr;
 }
 
-.headline{
+.artist .headline{
     width: 100%;
 }
-.headline h3{
+.artist .headline h3{
     color: white;
     font-family: 'Raleway', sans-serif;
     font-size: 40px;
@@ -50,20 +50,20 @@
     margin-left: 20px;
 }
 
-.headline h4{
+.artist .headline h4{
     font-family: 'Muli', sans-serif;
     font-size: 18px;
     color: gray;
     margin: 0;
     margin-left: 20px;
 }
-.musica{
+.artist .musica{
     display: flex;
     width: 100%;
     flex-direction: column;
 }
 
-.musica h5{
+.artist .musica h5{
     font-family: 'Muli', sans-serif;
     font-size: 18px;
     color: gray;
@@ -71,7 +71,7 @@
 
 }
 
-.musica ul{
+.artist .musica ul{
     color: white;
     list-style-type: none;
     font-family: 'Muli', sans-serif;
@@ -80,19 +80,19 @@
     margin-left: 20px;
 }
 
-.musica ul li a{
+.artist .musica ul li a{
     color: white;
     text-decoration: none;
     font-family: 'Muli', sans-serif;
 }
 
-.musica ul li a:hover{
+.artist .musica ul li a:hover{
     font-weight: bold;
     text-decoration: underline;
 }
 
 @media only screen and (max-width: 768px){
-    .content{
+    .content-artist{
         width: 100%;
         height: 700px;
         margin: 0em;
@@ -102,36 +102,36 @@
         grid-template-rows: 50% 50%;
     }
 
-    .imgContainer{
+    .artist .imgContainer{
         margin-bottom: 20px;
     }
-    .imgContainer img{
+    .artist .imgContainer img{
         width: 60%;
         height: 100%;
     }
 
-    .info{
+    .artist .info{
         justify-content: center;
     }
 
-    .info h3{
+    .artist .info h3{
         margin-left: 0;
     }
 
-    .info h4{
+    .artist .info h4{
         margin-left: 60px;
     }
-    .musica{
+    .artist .musica{
         align-items: center;
         margin-right: 0;
         margin-left: 0;
     }
 
-    .musica h5{
+    .artist .musica h5{
         margin-left: 0;
         width: 50%;
     }
-    .musica ul{
+    .artist .musica ul{
         margin-left: 0;
         width: 50%;
         text-align: center;
@@ -140,23 +140,23 @@
 }
 
 @media only screen and (max-width: 420px){
-    .imgContainer img{
+    .artist .imgContainer img{
         height: 60%;
         padding-bottom: 0;
     }
 
-    .info{
+    .artist .info{
         width: 100%;
     }
 
-    .info h3{
+    .artist .info h3{
         margin-left: 0;
     }
 
-    .info h4{
+    .artist .info h4{
         margin-left: 70px;
     }
-    .musica{
+    .artist .musica{
         width: 100%;
         margin: 0;
     }

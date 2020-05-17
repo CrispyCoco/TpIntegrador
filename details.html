@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/details.css">
     <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/album.css">
+    <link rel="stylesheet" href="css/artists.css">
+    <link rel="stylesheet" href="css/genreDetail.css">
+    <link rel="stylesheet" href="css/track.css">
     <script src="js/details.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a0c0bb4f74.js" crossorigin="anonymous"></script>
@@ -30,33 +33,102 @@
             <input type="text" placeholder="Search..">
         </div>
     </header>
-    <div class="container">
 
-        <div class="artists">
-            <h3 class="PM">Post Malone</h3>
-            <img src="../TpIntegrador/images/post malone.jpeg" alt="Post Malone">
-            <h4 class="play">Reproducir</h4>
-            <ul class="canciones">
-                <li>circles</li>
-                <li>goodbyes</li>
-                <li>sunflower</li>
-                <li>wow</li>
-            </ul>
+    <div class="conjunto">
+
+        <div class="container-album">
+            <div class="album">
+                <div class="imgContainer">
+                    <img src="images/album.jpeg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Beerpongs & Bentleys</h3>
+                    <div class="moreInfo">
+                        <a href="sequel.html" class="album-owner">Post Malone</a>
+                        <h5>2018- 18 canciones, 1h 4min</h5>
+                    </div>
+                    <div class="music">
+                        <ul>
+                            <li><a href="track.html">Paranoid</a></li>
+                            <li><a href="track.html">Spoil my night</a></li>
+                            <li><a href="track.html">Rich & Sad</a></li>
+                            <li><a href="track.html">Zack and Codeine</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="track.html">Takin' Shots</a></li>
+                            <li><a href="track.html">Rockstar</a></li>
+                            <li><a href="track.html">Over Now</a></li>
+                            <li><a href="track.html">Psycho</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="podcasts">
-            <h3 class="pod">*Nombre del podcast*</h3>
-            <img src="../TpIntegrador/images/podcast.jpeg" alt="podcast">
-            <h4 class="Rep">Reproducir</h4>
-            <h5 class="info">Acerca de...</h5>
+        <div class="container-artist">
+            <div class="artist">
+                <div class="imgContainer">
+                    <img src="../TpIntegrador/images/POST 2.jpeg" alt="">
+                </div>
+                <div class="info">
+                    <div class="headline">
+                        <h3>Post Malone</h3>
+                        <h4>Populares</h4>
+                    </div>
+                    <div class="musica">
+                        <h5>Top Tracks</h5>
+                        <ul>
+                            <li><a href="track.html">Circles</a></li>
+                            <li><a href="track.html">Rockstar</a></li>
+                            <li><a href="track.html">Sunflower</a></li>
+                            <li><a href="track.html">Wow.</a></li>
+                            <li><a href="track.html">Goodbyes</a></li>
+                            <li><a href="track.html">Saint-Tropez</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="tracks">
-            <h3 class="track">*NOMBRE DEL TRACK*</h3>
-           <img src="../TpIntegrador/images/tracks.jpeg" alt="tracks">
-           <h4 class="Re">Reproducir</h4>
+        <div class="container-genre">
+            <div class="genre">
+                <div class="imgContainer">
+                    <img src="images/Generic pop.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Pop</h3>
+                    <p>La música pop es un estilo musical derivado de la música popular. Su nombre, pop, procede del inglés, que es un acortamiento del término popular, que en español traduce 'popular'</p>
+                </div>
+            </div>     
         </div>
+
+        <div class="container-track">
+            <div class="track">
+                <div class="imgContainer">
+                    <div class="overImage">
+                        
+                    </div>
+                    <img src="images/The scotts portada.webp" alt="" class="imagen">
+                </div>
+        
+                <div class="info">
+                    <h3 class="title">THE SCOTTS</h3>
+                    <div class="moreInfo">
+                        <a href="artists.html" class="artist">Travis Scott</a>
+                        <p class="sideBar">/</p>
+                        <a href="album.html" class="album">THE SCOTTS</a>
+                    </div>
+                    <div class="duration"><h5>2 : 46</h5></div>
+    
+                    <div class="button">
+                        <a href="sequel.html" class="add">Add to playlist</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
+
     <footer>
         <div class="tags">
         </div>
