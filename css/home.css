@@ -129,7 +129,7 @@ header ul li:hover{
     height: 10%;
     align-self: center;
     display: grid;
-    grid-template-columns: 70% 15% 15%;
+    grid-template-columns: 60% 20% 20%;
     border: solid 1px rgba(128, 128, 128, 0.199);
     border-left: none;
     border-right: none;
