@@ -1,37 +1,71 @@
 window.onload = function(){
+    
     fetch(' https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0')
     
-    .then(function(response){
-	    return response.json();
-    })
+        .then(function(response){
+            return response.json();
+        })
     
-    .then(function(info){
-        console.log(info);
+        .then(function(info){
+            // console.log(info);
         
-        var listTrack = document.querySelector('.list-track');
-        var listArtist = document.querySelector('.list-artist');
-        for (let i = 0; i < info.tracks.data.length; i++) {
-            var element = info.tracks.data[i];
-            var toAdd = '<div class="trackBox">';
-            toAdd += '<div><a href="track.html">' + element.title +'</a></div>';
-            toAdd += '<div class="extraInfo"><a href="artists.html">' + element.artist.name + '</a></div>';
-            toAdd += '<div class="extraInfo"><a href="album.html">' + element.album.title + '</a></div>';
-            toAdd += '</div>';
-            listTrack.innerHTML += toAdd;
-        }
+            // Variables generales para las 3 secciones
+            var listTrack = document.querySelector('.list-track');
+            var listArtist = document.querySelector('.list-artist');
+            var listPodcast = document.querySelector('.list-podcast');
+            var artistsId = [];
+            
+            // Seccion top tracks 
+            for (let i = 0; i < info.tracks.data.length; i++) {
+                let element = info.tracks.data[i];
+                var toAdd = `<div class="trackBox">
+                                <div><a href="track.html">${element.title}</a></div>
+                                <div class="extraInfo"><a href="artists.html">${element.artist.name}</a></div>
+                                <div class="extraInfo"><a href="album.html">${element.album.title}</a></div>
+                            </div>`;
+                listTrack.innerHTML += toAdd;
+            }
+            
+            // Seccion top Artists
+            for (let i = 0; i < info.artists.data.length; i++) {
+                var element = info.artists.data[i];
+                artistsId = element.id
+                fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/' + artistsId)
+                    .then(function(response){
+                        return response.json();
+                    })
+                
+                    .then(function(info){
 
-        for (let i = 0; i < info.artists.data.length; i++) {
-            var element = info.artists.data[i];
-            var toAdd = '<div class="trackBox">';
-            toAdd += '<div><a href="track.html">' + element.name +'</a></div>';
-            toAdd += '<div class="extraInfo"><a href="artists.html">' + element.artist.name + '</a></div>';
-            toAdd += '</div>';
-            listArtist.innerHTML += toAdd;
-        }
-    })
+                        toAdd = `<div class="trackBox">
+                                    <div><a href="track.html">${info.name}</a></div>
+                                    <div class="extraInfo"><a href="sequel.html">${info.nb_fan} fans</a></div>
+                                </div>`;
+                        
+                        listArtist.innerHTML += toAdd;                        
+                    })
+
+                    .catch(function(error){
+                        console.log('El error fué: ' + error);
+                    })
+
+            }
+            var artistTrackbox = document.querySelector('.artists .trackBox');
+            // console.log(artistsId);
+            // Seccion top Podcasts
+            for (let i = 0; i < info.podcasts.data.length; i++) {
+                var element = info.podcasts.data[i];
+                toAdd = `<div class="trackBox">
+                            <div><a href="track.html">${element.title}</a></div>
+                            <div class="fans"><a href="sequel.html">${element.fans} fans</a></div>
+                        </div>`;
+                listPodcast.innerHTML += toAdd;
+            }
+            
+        })
     
-    .catch(function(error){
-	    console.log('El error fué: ' + error);
-    })
+        .catch(function(error){
+            console.log('El error fué: ' + error);
+        })
 
 }

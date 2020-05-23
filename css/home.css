@@ -187,7 +187,7 @@ header ul li:hover{
 }
 
 .artists .trackBox{
-    grid-template-columns: 85% 15%;
+    grid-template-columns: 80% 20%;
 }
 
 .artists .mainInfo{
@@ -223,6 +223,11 @@ header ul li:hover{
     color: whitesmoke;
     font-family: 'Raleway', sans-serif;
 }
+
+.podcasts .trackBox{
+    grid-template-columns: 80% 20%;
+}
+
 /*************************************** Footer *******************************************************/
 
 footer{
