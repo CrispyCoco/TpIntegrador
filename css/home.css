@@ -143,6 +143,10 @@ header ul li:hover{
     padding-top: 10px;
     font-family: 'Muli', sans-serif;
     font-size: small;
+    /* text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block; */
 }
 
 .trackBox a{
