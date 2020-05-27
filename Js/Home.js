@@ -24,7 +24,7 @@ window.onload = function(){
                 if(name.length > 16){
                     console.log(name);
                     
-                    let namePart = name.slice(0, 19);
+                    let namePart = name.slice(0, 15);
                     name = namePart + '...'
                     console.log(namePart);
                     
@@ -44,7 +44,7 @@ window.onload = function(){
             // Seccion top Artists
             for (let i = 0; i < info.artists.data.length; i++) {
                 var element = info.artists.data[i];
-                artistsId = element.id
+                artistsId = element.id;
                 fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/' + artistsId)
                     .then(function(response){
                         return response.json();
@@ -65,7 +65,6 @@ window.onload = function(){
                     })
 
             }
-            var artistTrackbox = document.querySelector('.artists .trackBox');
             // console.log(artistsId);
             // Seccion top Podcasts
             for (let i = 0; i < info.podcasts.data.length; i++) {
