@@ -154,6 +154,12 @@ header ul li:hover{
     color: white;
 }
 
+.trackBox .pFans{
+    color: gray;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .trackBox a:hover{
     text-decoration: underline;
     font-weight: bold;

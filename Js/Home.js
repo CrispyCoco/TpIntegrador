@@ -54,7 +54,7 @@ window.onload = function(){
 
                         toAdd = `<div class="trackBox">
                                     <div><a href="details.html">${info.name}</a></div>
-                                    <div class="extraInfo"><a href="sequel.html">${info.nb_fan} fans</a></div>
+                                    <div class="extraInfo"><p class="pFans">${info.nb_fan} fans</p></div>
                                 </div>`;
                         
                         listArtist.innerHTML += toAdd;                        
@@ -71,7 +71,7 @@ window.onload = function(){
                 var element = info.podcasts.data[i];
                 toAdd = `<div class="trackBox">
                             <div><a href="details.html">${element.title}</a></div>
-                            <div class="fans"><a href="sequel.html">${element.fans} fans</a></div>
+                            <div class="fans"><p class="pFans">${element.fans} fans</p></div>
                         </div>`;
                 listPodcast.innerHTML += toAdd;
             }
