@@ -152,6 +152,14 @@ header ul li:hover{
 .trackBox a{
     text-decoration: none;
     color: white;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    padding:4px 0;
+}
+
+.trackBox a:not(:hover) {
+    text-overflow: ellipsis;
 }
 
 .trackBox .pFans{
