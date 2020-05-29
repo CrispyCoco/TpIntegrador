@@ -117,3 +117,10 @@ footer ul li a{
 footer ul li a:hover{
     font-weight: bold;
 }
+.content{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(12, 11, 14);
+}
+
+}
