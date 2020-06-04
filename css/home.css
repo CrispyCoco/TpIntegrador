@@ -30,7 +30,7 @@
 
 .imgContainer{
     height: 400px;
-    width: 400px;
+    width: 30%;
     display: flex;
     align-self: center;
     position: relative;
@@ -38,7 +38,7 @@
 }
 
 .list{
-    width: 80%;
+    width: 70%;
     height: 380px;
     align-self: center;
     display: flex;

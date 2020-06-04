@@ -127,24 +127,31 @@ footer{
     background-color: black;
 }
 
-footer a img{
+footer .deezer img{
     width: 100px;
     height: 40px;
 }
 
+footer ul{
+    margin: 0;
+}
 footer ul li{
     list-style-type: none;
 }
 
-footer ul li a{
+footer .author{
     text-decoration: none;
     color: white;
     text-transform: capitalize;
     font-family: 'Muli', sans-serif;
 }
 
-footer ul li a:hover{
+.deezer{
+    height: 40px;
+}
+footer .author:hover{
     font-weight: bold;
+    color: white;
 }
 
 @media only screen and (max-width: 768px){
