@@ -12,9 +12,9 @@
     display: grid;
     grid-template-columns: 50% 50%;
     margin: 0;
-    margin-left: 40px;
-    padding-bottom: 40px;
-    padding-top: 40px;
+    margin-left: 8%;
+    padding-bottom: 80px;
+    padding-top: 80px;
 }
 
 .artist .imgContainer{
@@ -26,9 +26,8 @@
 }
 
 .artist .imgContainer img{
-    height: 60%;
+    height: 80%;
     width: 100%;
-    margin-bottom: 60px;
 }
 
 .artist .info{
@@ -57,13 +56,13 @@
     margin: 0;
     margin-left: 20px;
 }
-.artist .musica{
+.artist .music{
     display: flex;
     width: 100%;
     flex-direction: column;
 }
 
-.artist .musica h5{
+.artist .music h5{
     font-family: 'Muli', sans-serif;
     font-size: 18px;
     color: gray;
@@ -71,7 +70,7 @@
     margin-top: 20px;
 }
 
-.artist .musica ul{
+.artist .music ol{
     color: white;
     list-style-type: none;
     font-family: 'Muli', sans-serif;
@@ -80,13 +79,13 @@
     margin-left: 20px;
 }
 
-.artist .musica #last{
+.artist .music #last{
     border: solid 1px rgba(128, 128, 128, 0.315);
     border-left: none;
     border-right: none;
 }
 
-.artist .musica ul li{
+.artist .music ol li{
     border: solid 1px rgba(128, 128, 128, 0.315);
     padding-top: 2px;
     padding-bottom: 2px;
@@ -96,18 +95,18 @@
     padding-left: 10px;
 }
 
-.artist .musica ul li a{
+.artist .music ol li a{
     color: white;
     text-decoration: none;
     font-family: 'Muli', sans-serif;
 }
 
-.artist .musica ul li a:hover{
+.artist .music ol li a:hover{
     font-weight: bold;
     text-decoration: underline;
 }
 
-.artist .musica ul li:hover{
+.artist .music ol li:hover{
     background-color: rgba(128, 128, 128, 0.26);
 }
 
@@ -141,17 +140,17 @@
     .artist .info h4{
         margin-left: 60px;
     }
-    .artist .musica{
+    .artist .music{
         align-items: center;
         margin-right: 0;
         margin-left: 0;
     }
 
-    .artist .musica h5{
+    .artist .music h5{
         margin-left: 0;
         width: 50%;
     }
-    .artist .musica ul{
+    .artist .music ol{
         margin-left: 0;
         width: 50%;
         text-align: center;
@@ -176,7 +175,7 @@
     .artist .info h4{
         margin-left: 70px;
     }
-    .artist .musica{
+    .artist .music{
         width: 100%;
         margin: 0;
     }

@@ -6,7 +6,7 @@
     flex-direction: column;
     background-color: rgb(12, 11, 14);
     width: 100%;
-    display: none;
+    /* display: none; */
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -14,7 +14,7 @@
 .genre{
     margin-top: 30px;
     margin-bottom: 30px;
-    width: 800px;
+    width: 1200px;
     height: 500px;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -41,6 +41,9 @@
 .genre .info{
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .genre .info h3{
@@ -52,13 +55,56 @@
     margin-bottom: 10px;
 }
 
-.genre p{
-    color: white;
-    font-family: 'Muli',sans-serif;
-    margin-left: 10px;
-    margin-top: 60px;
+.genre .slider{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
 }
 
+.genre .slider-content{
+    /* height: 100%; */
+    /* margin-bottom: 30px; */
+    align-self: flex-end;
+    width: 100%;
+}
+
+.genre .uk-panel{
+    height: 100%;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.genre .slider-content ul{
+    height: 100%;
+}
+
+.genre .uk-grid>*{
+    padding-left: 0;
+}
+
+.genre .slider-content ul li{
+    height: 100%;
+}
+
+.genre .slider-content h4{
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+.genre .slider-content ul li img{
+    height: 80%;
+    width: 90%;
+}
+
+.genre .generic{
+    height: 70%;
+}
+
+.genre .uk-panel:hover{
+    background-color: rgba(128, 128, 128, 0.26);
+}
 @media only screen and (max-width: 768px){
     .genre{
         width: 100%;
