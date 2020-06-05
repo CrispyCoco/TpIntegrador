@@ -14,7 +14,7 @@ window.onload = function(){
         .catch(function(error){
             console.log('el error fue: '+ error);
         })
-    }else if (queryStringObj.has('artistaId')){
+    }else if (queryStringObj.has('artistId')){
         var id = queryStringObj.get('artistId');
         fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/' + id)
         .then(function(response){
