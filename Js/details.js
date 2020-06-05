@@ -10,6 +10,9 @@ window.onload = function(){
         })
         .then(function(data){
             console.log(data);
+            // QUERYSELECTOR DE LA CLASE QUE QUIERA MOSTRAR(TRACK)
+            var track = document.querySelector(".container-track");
+            track.style.display = "flex";
         })
         .catch(function(error){
             console.log('el error fue: '+ error);
@@ -22,6 +25,8 @@ window.onload = function(){
         })
         .then(function(data){
             console.log(data);
+            var artist = document.querySelector(".container-artist");
+            artist.style.display = "flex";
         })
         .catch(function(error){
             console.log('el error fue: '+ error);
@@ -34,6 +39,8 @@ window.onload = function(){
         })
         .then(function(data){
             console.log(data);
+            var album= document.querySelector(".container-album");
+            album.style.display = "flex";
         })
         .catch(function(error){
             console.log('el error fue: '+ error);
@@ -41,6 +48,17 @@ window.onload = function(){
     }else if (queryStringObj.has('genreId')){
         var id = queryStringObj.get('genreId');
         fetch('https://cors-anywhere.herokuapp.com/http//api.deezer.com/genre/' + id)
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(data){
+            console.log(data);
+            var genre = document.querySelector(".container-genre");
+            genre.style.display = "flex";
+        })
+        .catch(function(error){
+            console.log('el error fue: '+ error);
+        })
     }
     
 
