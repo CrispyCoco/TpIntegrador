@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/genreDetail.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/css/uikit.min.css" />
     <link rel="stylesheet" href="css/general.css">
-    <script src="js/home.js"></script>
+    <link rel="stylesheet" href="css/genreDetail.css">
+    <!-- <script src="js/home.js"></script> -->
     <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a0c0bb4f74.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit-icons.min.js"></script>
     <title>SoundWave</title>
     <link rel="shortcut icon" href="images/Group 8.svg">
 </head>
@@ -32,25 +35,95 @@
         </div>
     </header>
 
-    <div class="container">
-        <div class="content">
+    <div class="container-genre">
+        <div class="genre">
             <div class="imgContainer">
                 <img src="images/Generic pop.jpg" alt="">
             </div>
             <div class="info">
                 <h3>Pop</h3>
-                <p>La música pop es un estilo musical derivado de la música popular. Su nombre, pop, procede del inglés, que es un acortamiento del término popular, que en español traduce 'popular'</p>
+                <div class="slider">
+                    <h4>Top artists</h4>
+                    <div class="uk-position-relative uk-visible-toggle uk-light slider-content" tabindex="-1" uk-slider>
+
+                        <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid">
+                            <li>
+                                <div class="uk-panel">
+                                    <img src="images/DRAKE.jpeg" alt="">
+                                    <div class="uk-position-center uk-panel"><h1>1</h1></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="uk-panel">
+                                    <img src="images/DRAKE.jpeg" alt="">
+                                    <div class="uk-position-center uk-panel"><h1>2</h1></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="uk-panel">
+                                    <img src="images/DRAKE.jpeg" alt="">
+                                    <div class="uk-position-center uk-panel"><h1>3</h1></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="uk-panel">
+                                    <img src="images/DRAKE.jpeg" alt="">
+                                    <div class="uk-position-center uk-panel"><h1>4</h1></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="uk-panel">
+                                    <img src="images/DRAKE.jpeg" alt="">
+                                    <div class="uk-position-center uk-panel"><h1>5</h1></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="uk-panel">
+                                    <img src="images/DRAKE.jpeg" alt="">
+                                    <div class="uk-position-center uk-panel"><h1>6</h1></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="uk-panel">
+                                    <img src="images/DRAKE.jpeg" alt="">
+                                    <div class="uk-position-center uk-panel"><h1>7</h1></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="uk-panel">
+                                    <img src="images/DRAKE.jpeg" alt="">
+                                    <div class="uk-position-center uk-panel"><h1>8</h1></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="uk-panel">
+                                    <img src="images/DRAKE.jpeg" alt="">
+                                    <div class="uk-position-center uk-panel"><h1>9</h1></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="uk-panel">
+                                    <img src="images/DRAKE.jpeg" alt="">
+                                    <div class="uk-position-center uk-panel"><h1>10</h1></div>
+                                </div>
+                            </li>
+                        </ul>
+                    
+                        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                    </div>
+                </div>
             </div>
         </div>     
     </div>
     
     <footer>
         <ul>
-            <li> <a href="about.html">joaquin gomez rodriguez</a></li>
-            <li><a href="about.html">brian david oranges</a></li>
-            <li><a href="about.html">isaac leonardo yoon</a></li>
+            <li><a href="about.html" class="author">joaquin gomez rodriguez</a></li>
+            <li><a href="about.html" class="author">brian david oranges</a></li>
+            <li><a href="about.html" class="author">isaac leonardo yoon</a></li>
         </ul>
-        <a href="https://www.deezer.com/en/"><img src="images/deezerLogo.png" alt="Deezer logo"></a>
+        <a href="https://www.deezer.com/en/" class="deezer"><img src="images/deezerLogo.png" alt="Deezer logo"></a>
     </footer>
 </body>
 </html>
