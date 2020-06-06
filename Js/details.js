@@ -5,9 +5,6 @@ window.onload = function(){
     var album = document.querySelector(".container-album");
     var genre = document.querySelector(".container-genre");
     var track = document.querySelector(".container-track");
-    var duration;
-    var durationStr;
-    var durationHr;
     var durationMin;
     var durationSec;
     var trackList = ``;
@@ -31,7 +28,8 @@ window.onload = function(){
                 return response.json();
             })
             .then(function(data){
-                // console.log(data);
+                console.log(data);
+                playlist = [data];
                 // console.log(track);
                 durationMin = Math.floor(data.duration/60);
                 durationSec = data.duration - durationMin*60;
@@ -77,13 +75,30 @@ window.onload = function(){
                                 </div>
                     
                                 <div class="button">
-                                    <a href="sequel.html" class="add"><span uk-icon="icon: bookmark"></span> Add to playlist</a>
+                                    <button class="add"><span><span uk-icon="icon: bookmark"></span> Add to playlist</button>
+                                    <button class="added"><span><span uk-icon="icon: check" class="tick"></span> Added</button>
                                 </div>
                                 <div class="duration"><h5>${durationMin} : ${durationSec}</h5></div>
                                 </div>
                             </div>`;
                 track.innerHTML += toAdd;
-                track.style.display = 'flex'
+                track.style.display = 'flex';
+
+                let add = document.querySelector('.add');
+                let added = document.querySelector('.added');
+                add.addEventListener('click', function(){
+
+                    if(window.localStorage.getItem('playlist') === null){
+                        window.localStorage.setItem('playlist', JSON.stringify(playlist));
+                    } else {
+                        playlist = JSON.parse(window.localStorage.getItem('playlist'));
+                        playlist.push(data);
+                        window.localStorage.setItem('playlist', JSON.stringify(playlist));
+                        console.log(JSON.parse(window.localStorage.getItem('playlist')));
+                    }
+                    add.style.display = 'none';
+                    added.style.display = 'block';
+                })
             })
             .catch(function(error){
                 console.log('El error fué: ' + error);
@@ -307,6 +322,7 @@ window.onload = function(){
                     for (let i = 0; i < 10; i++) {
                         const element = data.data[i];
                         addArtist += `<li>
+                                        <a href="details.html?"
                                         <div class="uk-panel">
                                             <img src="${element.picture_medium}" alt="">
                                             <h4>${element.name}</h4>
