@@ -121,8 +121,26 @@
     margin-bottom: 80px;
     padding: 6px 20px;
     border-radius: 30px;
+    border: 0;
 }
 
+.track .added{
+    color: rgb(75, 26, 171);
+    text-decoration: none;
+    font-family: 'Muli', sans-serif;
+    background-color: white;
+    font-size: 30px;
+    align-self: flex-end;
+    margin-bottom: 80px;
+    padding: 6px 20px;
+    border-radius: 30px;
+    border: 0;
+    display: none;
+}
+
+.track .tick{
+    color: rgb(75, 26, 171);
+}
 .track .album:hover{
     font-weight: bold;
     text-decoration: underline;
@@ -133,7 +151,7 @@
     text-decoration: underline;
 }
 
-.button a:hover{
+.button .add:hover{
     background-color: rgb(131, 106, 182);
 }
 

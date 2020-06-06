@@ -37,6 +37,10 @@ header img{
     font-family: 'Muli', sans-serif;
 }
 
+.uk-margin-small-right{
+    padding-right: 0;
+}
+
 .uk-icon{
     color: white;
 }
@@ -65,6 +69,7 @@ header img{
     border-radius: 15px;
     display: flex;
     justify-content: space-between;
+    margin-right: 10px;
 }
 
 .buscador input{
@@ -72,6 +77,7 @@ header img{
     background-color: whitesmoke;
     border-radius: 15px;
     border: 0;
+    height: 90%;
 }
 
 .buscador i{
@@ -87,6 +93,7 @@ header img{
     width: 500px;
     justify-content: space-around;
     padding: 0;
+    margin-bottom: auto;
 }
 
 .tags ul li{
