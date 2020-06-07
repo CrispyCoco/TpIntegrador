@@ -13,7 +13,7 @@ window.onload = function(){
     var queryStringObj = new URLSearchParams(queryString);
     var id;
     var fans;
-    var toAdd = '';
+    var toAdd = ``;
     
     // **************************************************************************
     // Detalles de tracks
@@ -293,10 +293,12 @@ window.onload = function(){
                 
                                         <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid slider-ul">
                                             <li>
-                                                <div class="uk-panel">
-                                                    <img src="images/Top artists genre .jpg" alt="" class="generic">
-                                                    <h4>Top Artists </h4>
-                                                </div>
+                                                <a href="home.html">
+                                                    <div class="uk-panel">
+                                                        <img src="images/Top artists genre .jpg" alt="" class="generic">
+                                                        <h4>Top Artists </h4>
+                                                    </div>
+                                                </a>
                                             </li>
                                         </ul>
                                     
@@ -322,12 +324,14 @@ window.onload = function(){
                     for (let i = 0; i < 10; i++) {
                         const element = data.data[i];
                         addArtist += `<li>
-                                        <a href="details.html?"
-                                        <div class="uk-panel">
-                                            <img src="${element.picture_medium}" alt="">
-                                            <h4>${element.name}</h4>
-                                        </div>
+                                        <a href="details.html?artistId=${element.id}">
+                                            <div class="uk-panel">
+                                                <img src="${element.picture_big}" alt="">
+                                                <h4>${element.name}</h4>
+                                            </div>
+                                        </a>
                                     </li>`
+                        
                     }
 
                     sliderUl.innerHTML += addArtist;
