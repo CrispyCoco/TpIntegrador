@@ -10,6 +10,11 @@
     padding-top: 40px;
 }
 
+.album-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .album{
     width: 800px;
     height: 500px;
@@ -44,18 +49,23 @@
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: 2fr 1fr 3fr;
+    grid-template-rows: 50% 50%;
 }
 
 .album .info h3{
     color: white;
     font-family: 'Raleway', sans-serif;
     margin-left: 60px;
-    margin-top: 40px;
+    /*margin-top: 40px;*/
     font-size: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
+.album .info .title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
 .album .info h5{
     font-family: 'Muli', sans-serif;
     font-size: 10px;
@@ -67,7 +77,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
     margin-right: 0;
@@ -76,6 +86,7 @@
 .album .moreInfo a{
     color: white;
     margin-left: 60px;
+    font-size: 20px;
 }
 .album .moreInfo h5{
     margin: 0;
@@ -92,17 +103,25 @@
     font-size: 20px;
 }
 
-.album .music{
+.container-album .music{
     display: flex;
-    width: 100%;
-    height: 90%;
+    width: 80%;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0;
 }
 
-.album .music .track{
+.container-album .music h5{
+    color: white;
+    font-family: 'Muli', sans-serif;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+
+.container-album .music .track{
     width: 49%;
-    height: 25%;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -111,16 +130,17 @@
     /* border-left: 0; */
 }
 
-.album .music .track a{
+.container-album .music .track a{
     font-family: 'Muli', sans-serif;
     color: white;
     margin-left: 10px;
+    text-decoration: none;
 }
 
-.album .music .track:hover{
+.container-album .music .track:hover{
     background-color: rgba(128, 128, 128, 0.26);
 }
-.album .moreInfo a:hover{
+.container-album .music a:hover{
     font-weight: bold;
     text-decoration: underline;
 }
