@@ -40,7 +40,7 @@ window.onload = function(){
                 let trackTitle = data.title;
                 let albumTitle = data.album.title;
                 let artistName = data.artist.name;
-                console.log(trackTitle.length);
+                // console.log(trackTitle.length);
                 
                 if (trackTitle.length > 30) {
                     let titlePart = data.title.slice(0,29);
@@ -88,14 +88,18 @@ window.onload = function(){
                 let added = document.querySelector('.added');
                 add.addEventListener('click', function(){
 
-                    if(window.localStorage.getItem('playlist') === null){
-                        window.localStorage.setItem('playlist', JSON.stringify(playlist));
+                    window.localStorage.setItem(`Id ${data.id}`, JSON.stringify(data));
+                    if(window.localStorage.getItem('ListIds') === null){
+                        let playlistIds = [data.id];
+                        window.localStorage.setItem('ListIds', JSON.stringify(playlistIds));
                     } else {
-                        playlist = JSON.parse(window.localStorage.getItem('playlist'));
-                        playlist.push(data);
-                        window.localStorage.setItem('playlist', JSON.stringify(playlist));
-                        console.log(JSON.parse(window.localStorage.getItem('playlist')));
+                        ids = JSON.parse(window.localStorage.getItem('ListIds'));
+                        ids.push(data.id);
+                        window.localStorage.setItem('ListIds', JSON.stringify(ids));
                     }
+                    // console.log(JSON.parse(window.localStorage.getItem('ListIds')));
+                    // console.log(JSON.parse(window.localStorage.getItem(`Id ${data.id}`)));
+                    
                     add.style.display = 'none';
                     added.style.display = 'block';
                 })

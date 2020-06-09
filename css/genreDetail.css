@@ -73,6 +73,7 @@
     height: 100%;
     align-items: center;
     padding-left: 30px;
+    padding-right: 10px;
 }
 
 .genre .slider-content ul{
@@ -104,7 +105,9 @@
 
 .genre .uk-panel:hover{
     background-color: rgba(128, 128, 128, 0.26);
+    text-decoration-line: none;
 }
+
 @media only screen and (max-width: 768px){
     .genre{
         width: 100%;

@@ -7,7 +7,7 @@ window.onload = function(){
         })
     
         .then(function(info){
-            console.log(info);
+            // console.log(info);
         
             // Variables generales para las 3 secciones
             var listTrack = document.querySelector('.list-track');
@@ -49,7 +49,7 @@ window.onload = function(){
             
             // Seccion top Artists
             for (let i = 0; i < info.artists.data.length; i++) {
-                var element = info.artists.data[i];
+                let element = info.artists.data[i];
                 artistsId = element.id;
                 fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/' + artistsId)
                     .then(function(response){
@@ -62,9 +62,10 @@ window.onload = function(){
                             let namePart = name.slice(0, 23);
                             name = namePart + '...';
                         }
+                        let fans = numberWithCommas(info.nb_fan);
                         toAdd = `<div class="trackBox">
                                     <div><a href="details.html?artistId=${info.id}">${name}</a></div>
-                                    <div class="extraInfo"><p class="pFans">${info.nb_fan} fans</p></div>
+                                    <div class="extraInfo"><p class="pFans">${fans} fans</p></div>
                                 </div>`;
                         
                         listArtist.innerHTML += toAdd;                        
@@ -77,18 +78,18 @@ window.onload = function(){
             }
             // console.log(artistsId);
             // Seccion top Podcasts
-            for (let i = 0; i < info.podcasts.data.length; i++) {
-                var element = info.podcasts.data[i];
+            for (let i = 0; i < info.albums.data.length; i++) {
+                let element = info.albums.data[i];
                 let title = element.title;
                 if (title.length > 24) {
                     let titlePart = title.slice(0,23);
                     title = titlePart + '...';
                 }
-                console.log(title);
+                // console.log(element);
                 
                 toAdd = `<div class="trackBox">
-                            <div><a href="details.html?podcastId=${element.id}">${title}</a></div>
-                            <div class="fans extraInfo"><p class="pFans">${element.fans} fans</p></div>
+                            <div><a href="details.html?albumId=${element.id}">${title}</a></div>
+                            <div class="fans extraInfo"><a href="details.html?artistId">${element.artist.name}</a></div>
                         </div>`;
                 listPodcast.innerHTML += toAdd;
             }
@@ -165,4 +166,8 @@ window.onload = function(){
             console.log('El error fué: ' + error);
         })
 
+}
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }

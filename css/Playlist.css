@@ -79,6 +79,13 @@
     padding-bottom: 2px;
     border-radius: 30px;
     background-color: rgb(75, 26, 171);
+    border: 0;
+}
+
+#play svg{
+    height: 30px;
+    width: 30px;
+    margin-bottom: 5px;
 }
 
 #more{
