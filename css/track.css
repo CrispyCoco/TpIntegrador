@@ -1,3 +1,5 @@
+
+
 .container-track{
     margin-top: 100px;
     margin-left: 0;
@@ -6,6 +8,8 @@
     flex-direction: column;
     background-color: rgb(12, 11, 14);
     width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .track{
@@ -19,7 +23,7 @@
 
 .track .imgContainer{
     width: 100%;
-    height: 100%px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,6 +54,9 @@
 .track .info{
     height: 100%;
     width: 100%;
+    /* display: grid; */
+    align-content: space-between;
+    /* grid-template-rows: 2fr 1fr 2fr 1fr; */
 }
 
 .track .moreInfo{
@@ -65,27 +72,18 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    color: gray;
+    color: white;
     font-family: 'Muli', sans-serif;
     text-decoration: none;
     font-size: 20px;
     height: 100%;
 }
 
-.track .sideBar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: gray;
-    font-family: 'Muli', sans-serif;
-    font-size: 20px;
-}
-
 .track .album{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    color: gray;
+    color: white;
     font-family: 'Muli', sans-serif;
     font-size: 20px;
     text-decoration: none;
@@ -100,10 +98,12 @@
 
 .track .duration{
     display: flex;
-    width: 40%;
-    justify-content: center;
-    justify-self: left;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-top: 20px;
 }
+
 
 .track .button{
     width: 100%;
@@ -123,6 +123,21 @@
     padding: 6px 20px;
     border-radius: 30px;
 }
+
+.track .album:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.track .artist:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.button a:hover{
+    background-color: rgb(131, 106, 182);
+}
+
 
 @media only screen and (max-width: 768px){
     .track{

@@ -13,15 +13,30 @@
 </head>
 <body>
     <header>
+        <div class="navBar">
+            <button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-nav-primary"><span uk-icon="icon: table" class="tableIcon"></span></button>
+
+            <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+                <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+                    <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                        <li class="uk-active"><a href="home.html"><img src="images/Group 8.svg" alt=""></a></li>
+                        <li class="uk-nav-header">Categories</li>
+                        <li><a href="home.html" class="hover"><span class="uk-margin-small-right" uk-icon="icon: home"></span> Home</a></li>
+                        <li><a href="about.html" class="hover"><span class="uk-margin-small-right" uk-icon="icon: info"></span> About</a></li>
+                        <li><a href="genre.html" class="hover"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Genres</a></li>
+                        <li class="uk-nav-divider"></li>
+                        <li><a href="playlist.html" class="hover"><span class="uk-margin-small-right" uk-icon="icon: bookmark"></span> My Playlist</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <a href="Home.html"><img src="images/Group 8.svg" alt="Logo"></a>
         <div class="tags">
             <ul>
                 <li><a href="Home.html" class="hover">home</a></li>
                 <li><a href="about.html" class="hover">about</a></li>
                 <li><a href="Genre.html" class="hover">genres</a></li>
-                <li>
-                    <a href="Home.html" class="hover">categories<i class="fas fa-chevron-down"></i></a>
-                </li>
                 <li><a href="Playlist.html" class="hover">my playlist</a></li>
             </ul>
         </div>
@@ -30,6 +45,7 @@
             <input type="text" placeholder="Search..">
         </div>
     </header>
+<<<<<<< HEAD
         
     //estructura de los generos 
     <div class="content">   
@@ -43,6 +59,13 @@
         </div>  
     </div>   
     
+=======
+    <div class="container">
+        <div class="content">
+        </div>
+    </div>
+
+>>>>>>> 678a669f2b3c87aef6c047708cd2abe78b461f49
     <footer>
         <ul>
             <li> <a href="about.html">joaquin gomez rodriguez</a></li>

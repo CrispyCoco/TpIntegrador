@@ -1,78 +1,3 @@
-body{
-    margin: 0;
-}
-header{
-    display: flex;
-    width: 100%;
-    height: 100px;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    z-index: 2001; 
-    background-color: black;
-    margin-top: 0;
-}
-
-header img{
-    width: 105px;
-    height: 90px;
-}
-
-.buscador{
-    height: 30px;
-    width: 310px;
-    background-color: whitesmoke;
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.buscador input{
-    width: 280px;
-    background-color: whitesmoke;
-    border-radius: 15px;
-    border: 0;
-}
-
-.buscador i{
-    width: 10px;
-    align-self: center;
-    margin-left: 5px;
-}
-
-header ul{
-    display: flex;
-    flex-direction: row;
-    margin-left: 0;
-    width: 500px;
-    justify-content: space-around;
-    padding: 0;
-}
-
-header ul li{
-    list-style-type: none;
-    text-transform: capitalize;
-}
-
-header ul li a{
-    text-decoration: none;
-    color: white;
-    font-family: 'Muli', sans-serif;
-    
-}
-
-header ul li{
-    color: white;
-}
-
-.hover:hover{
-    color: rgb(75, 26, 171);
-}
-
-header ul li:hover{
-    color: rgb(75, 26, 171);
-}
 /******************************* General container  *******************************************/
 
 .container{
@@ -85,9 +10,27 @@ header ul li:hover{
     background-color: rgb(12, 11, 14);
 }
 
+.uk-slider-items{
+    height: 300px;
+}
+.uk-slider-items li{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    /* margin-left: 10%; */
+    /* margin-left: 10%; */
+}
+
+.uk-slider-items img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .imgContainer{
     height: 400px;
-    width: 400px;
+    width: 30%;
     display: flex;
     align-self: center;
     position: relative;
@@ -95,7 +38,7 @@ header ul li:hover{
 }
 
 .list{
-    width: 100%;
+    width: 70%;
     height: 380px;
     align-self: center;
     display: flex;
@@ -152,6 +95,14 @@ header ul li:hover{
 .trackBox a{
     text-decoration: none;
     color: white;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    padding:4px 0;
+}
+
+.trackBox a:not(:hover) {
+    text-overflow: ellipsis;
 }
 
 .trackBox .pFans{
@@ -237,40 +188,8 @@ header ul li:hover{
 .podcasts .trackBox{
     grid-template-columns: 80% 20%;
 }
-
-/*************************************** Footer *******************************************************/
-
-footer{
-    display: flex;
-    height: 100px;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    background-color: black;
-}
-
-footer a img{
-    width: 100px;
-    height: 40px;
-}
-
-footer ul li{
-    list-style-type: none;
-}
-
-footer ul li a{
-    text-decoration: none;
-    color: white;
-    text-transform: capitalize;
-    font-family: 'Muli', sans-serif;
-}
-
-footer ul li a:hover{
-    font-weight: bold;
-}
-
 /* **************************************Tablet**************************************************** */
+
 @media only screen and (max-width: 768px){
     /* *********************** Header tablet *************************** */
     header img{
@@ -288,6 +207,9 @@ footer ul li a:hover{
 
     /* *********************** General tablet *************************** */
 
+    .slider{
+        display: none;
+    }
     .container img{
         height: 300px;
         width: 300px;
@@ -343,15 +265,6 @@ footer ul li a:hover{
 
 @media only screen and (max-width: 400px){
     /* *********************** Header mobile *************************** */
-
-    .tags{
-        display: none;
-    }
-
-    header img{
-        height: 50px;
-        width: 70px;
-    }
 
     .imgContainer{
         height: 250px;

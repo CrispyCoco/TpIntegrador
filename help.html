@@ -3,23 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/css/uikit.min.css" />
     <link rel="stylesheet" href="css/help.css">
-    <link rel="stylesheet" href="css/general.css">
     <script src="https://kit.fontawesome.com/a0c0bb4f74.js" crossorigin="anonymous"></script>
     <title>SoundWave</title>
     <link rel="shortcut icon" href="images/Group 8.svg">
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.3/dist/js/uikit-icons.min.js"></script>
+    <script src="js/help.js"></script>
+    <link rel="stylesheet" href="css/general.css">
 </head>
 <body>
     <header>
-        <a href="Home.html"><img src="images/Group 8.svg" alt="Logo"></a>
+        <div class="navBar">
+            <button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-nav-primary"><span uk-icon="icon: table" class="tableIcon"></span></button>
+
+            <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+                <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+                    <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                        <li class="uk-active"><a href="home.html"><img src="images/Group 8.svg" alt=""></a></li>
+                        <li class="uk-nav-header">Categories</li>
+                        <li><a href="#" class="hover"><span class="uk-margin-small-right" uk-icon="icon: home"></span> Home</a></li>
+                        <li><a href="#" class="hover"><span class="uk-margin-small-right" uk-icon="icon: info"></span> About</a></li>
+                        <li><a href="#" class="hover"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Genres</a></li>
+                        <li class="uk-nav-divider"></li>
+                        <li><a href="#" class="hover"><span class="uk-margin-small-right" uk-icon="icon: bookmark"></span> My Playlist</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <a href="Home.html"><img src="images/Group 8.svg" alt="" class="logo"></a>
         <div class="tags">
-            <ul>
+            <ul class="listaLinks">
                 <li><a href="Home.html" class="hover">home</a></li>
                 <li><a href="about.html" class="hover">about</a></li>
                 <li><a href="help.html" class="hover">genres</a></li>
-                <li>
-                    <a href="Home.html" class="hover">categories<i class="fas fa-chevron-down"></i></a>
-                </li>
                 <li><a href="Playlist.html" class="hover">my playlist</a></li>
             </ul>
         </div>
@@ -28,6 +47,28 @@
             <input type="text" placeholder="Search..">
         </div>
     </header>
+
+<!-- <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <ul class="uk-nav uk-nav-default">
+            <li class="uk-active"><a href="#">Active</a></li>
+            <li class="uk-parent">
+                <a href="#">Parent</a>
+                <ul class="uk-nav-sub">
+                    <li><a href="#">Sub item</a></li>
+                    <li><a href="#">Sub item</a></li>
+                </ul>
+            </li>
+            <li class="uk-nav-header">Header</li>
+            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: table"></span> Item</a></li>
+            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Item</a></li>
+            <li class="uk-nav-divider"></li>
+            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Item</a></li>
+        </ul>
+
+    </div> -->
+
     <footer>
         <div class="tags">
         </div>

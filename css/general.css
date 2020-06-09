@@ -19,6 +19,45 @@ header img{
     height: 90px;
 }
 
+/* *************************Desplegable************************************* */
+
+.navBar{
+    display: none;
+}
+#offcanvas-nav-primary .uk-active img{
+    height: 130px;
+    width: 170px;
+}
+
+.uk-nav-header{
+    font-size: 25px;
+}
+
+.hover{
+    font-family: 'Muli', sans-serif;
+}
+
+.uk-icon{
+    color: white;
+}
+
+.tableIcon svg{
+    height: 40px;
+    width: 40px;
+}
+.uk-button-default{
+    border: none;
+}
+.tableIcon:hover{
+    color: rgb(75, 26, 171);
+}
+
+.uk-offcanvas-bar{
+    background-color: rgb(12, 11, 14);
+}
+
+/* *************************Desplegable************************************* */
+
 .buscador{
     height: 30px;
     width: 310px;
@@ -41,7 +80,7 @@ header img{
     margin-left: 5px;
 }
 
-header ul{
+.tags ul{
     display: flex;
     flex-direction: row;
     margin-left: 0;
@@ -50,19 +89,23 @@ header ul{
     padding: 0;
 }
 
-header ul li{
+.tags ul li{
     list-style-type: none;
     text-transform: capitalize;
 }
 
-header ul li a{
+.tags ul li a{
     text-decoration: none;
     color: white;
     font-family: 'Muli', sans-serif;
 
 }
 
-header ul li{
+.hover{
+    border: none;
+    font-family: 'Muli', sans-serif;
+}
+.tags ul li{
     color: white;
 }
 
@@ -70,7 +113,7 @@ header ul li{
     color: rgb(75, 26, 171);
 }
 
-header ul li:hover{
+.tags ul li:hover{
     color: rgb(75, 26, 171);
 }
 
@@ -84,24 +127,31 @@ footer{
     background-color: black;
 }
 
-footer a img{
+footer .deezer img{
     width: 100px;
     height: 40px;
 }
 
+footer ul{
+    margin: 0;
+}
 footer ul li{
     list-style-type: none;
 }
 
-footer ul li a{
+footer .author{
     text-decoration: none;
     color: white;
     text-transform: capitalize;
     font-family: 'Muli', sans-serif;
 }
 
-footer ul li a:hover{
+.deezer{
+    height: 40px;
+}
+footer .author:hover{
     font-weight: bold;
+    color: white;
 }
 
 @media only screen and (max-width: 768px){
@@ -127,6 +177,15 @@ footer ul li a:hover{
 @media only screen and (max-width: 420px){
     .tags{
         display: none;
+    }
+    .logo{
+        display: none;
+    }
+    .navBar{
+        display: contents;
+    }
+    .navBar ul {
+        width: 100%;
     }
 
     header img{
