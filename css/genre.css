@@ -79,6 +79,18 @@
     font-size: 15px;
 }
 
+<<<<<<< HEAD
+footer ul li a:hover{
+    font-weight: bold;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(12, 11, 14);
+}
+
+=======
 .genre:hover{
     background-color: rgba(128, 128, 128, 0.26)
+>>>>>>> 678a669f2b3c87aef6c047708cd2abe78b461f49
 }

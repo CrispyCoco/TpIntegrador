@@ -15,6 +15,7 @@ window.onload = function(){
             // QUERYSELECTOR DE LA CLASE QUE QUIERA MOSTRAR(TRACK)
             var track = document.querySelector(".container-track");
             track.style.display = "flex";
+<<<<<<< HEAD
             toAdd=
             `<div class="track">
                 <div class="imgContainer">
@@ -39,7 +40,45 @@ window.onload = function(){
                 </div>
             </div>`
             track.innerHTML+=toAdd;
+=======
+            //ENVIAR INFO AL LOCAL STORAGE
+            let agregarCancion = document.querySelector(".button")
+            let playlist = [info]
+
+            agregarCancion.addEventListener("click",function(){
+                if (window.localStorage.getItem("playlist")=== null) {
+                    window.localStorage.setItem("playlist", JSON.stringify(playlist))
+                }else {
+                   let cancionObjeto=JSON.parse(window.localStorage.getItem("playlist"))
+                    cancionObjeto.push(info) 
+                    window.localStorage.setItem("playlist", JSON.stringify(cancionObjeto))
+                    console.log (cancionObjeto)
+
+
+
+
+
+
+                }
+
+            })
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 0b82ee08b54caf878afaaf2225eeb8121bf67964
         })
+
+
+
         .catch(function(error){
             console.log('el error fue: '+ error);
         })
