@@ -15,7 +15,6 @@ window.onload = function(){
             // QUERYSELECTOR DE LA CLASE QUE QUIERA MOSTRAR(TRACK)
             var track = document.querySelector(".container-track");
             track.style.display = "flex";
-<<<<<<< HEAD
             toAdd=
             `<div class="track">
                 <div class="imgContainer">
@@ -40,7 +39,6 @@ window.onload = function(){
                 </div>
             </div>`
             track.innerHTML+=toAdd;
-=======
             //ENVIAR INFO AL LOCAL STORAGE
             let agregarCancion = document.querySelector(".button")
             let playlist = [info]
@@ -74,7 +72,6 @@ window.onload = function(){
 
 
 
->>>>>>> 0b82ee08b54caf878afaaf2225eeb8121bf67964
         })
 
 
