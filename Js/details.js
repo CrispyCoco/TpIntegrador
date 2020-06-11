@@ -33,7 +33,7 @@ window.onload = function(){
                     </div>
                     
                     <div class="button">
-                        <a href="sequel.html" class="add">Add to playlist</a>
+                        <a href="playlist.html" class="add">Add to playlist</a>
                     </div>
                     <div class="duration"><h5>${info.duration}</h5></div>
                 </div>

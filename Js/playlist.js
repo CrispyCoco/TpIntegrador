@@ -9,13 +9,24 @@ let containerplaylist= document.querySelector(".playlistTrack")
 
 console.log (canciones)
 
-let clearAll= document.querySelector (".Borrar")
+let moticon = document.querySelector (".moticon")
+
+
+let clearAll= document.querySelector (".borrar")
 clearAll.addEventListener ("click", function(){
     window.localStorage.clear ("playlist")
 })
 
+if (canciones===null) {containerplaylist.innerHTML += `
+<div class="mensajeCanciones">Todavia No Agregaste Canciones 
+</div>
 
-canciones.forEach(track => {
+`
+
+ //  mensaje cuando no hay canciones con emoticon pro 
+} else {
+    moticon.style.display="none";
+    canciones.forEach(track => {
     containerplaylist.innerHTML += `
     <div class="track">
                         <div class="albumContainer"><img src="${track.album.cover_small}" alt="Album de prueba"></div>
@@ -36,6 +47,16 @@ canciones.forEach(track => {
 
     
 });
+
+    
+}
+
+
+
+
+
+
+
 
 
 
