@@ -104,20 +104,36 @@ window.onload = function(){
                             <h3>${name}</h3>
                             <h4>${fans} Fans</h4>
                         </div>
-                        <div class="musica">
+                        <div class="music">
                             <h5>Top Tracks</h5>
                             <ol>
-                            <li><a href="track.html">Circles</a></li>
-                            <li><a href="track.html">Rockstar</a></li>
-                            <li><a href="track.html">Sunflower</a></li>
-                            <li><a href="track.html">Wow.</a></li>
-                            <li><a href="track.html">Goodbyes</a></li>
-                            <li id="last"><a href="track.html">Saint-Tropez</a></li>
                             </ol>
                         </div>
                     </div>
                  </div>`;
             artist.innerHTML+=toAdd;
+            
+            fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/'+ id +'/top')
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(info){
+                console.log(info.data);
+                var musicol = document.querySelector(".music ol");
+                let artistArray=info.data
+
+                for (let i = 0; i < 6; i++) {
+                    const element = info.data[i];
+
+                    divColumna+='<li><a href="track.html?id=' + artistArray[i].id + '"' + ' class="music"> ' + artistArray[i].title +'</a></li>';
+                
+                }
+                musicol.innerHTML=divColumna;   
+            })
+            .catch(function(error){
+                console.log('el error fue: '+ error);
+            })
+            
             
         })
         .catch(function(error){
@@ -168,7 +184,7 @@ window.onload = function(){
         // PAGINA DE GENRE
     }else if (queryStringObj.has('genreId')){
         var id = queryStringObj.get('genreId');
-        fetch('https://cors-anywhere.herokuapp.com/http//api.deezer.com/genre/' + id)
+        fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/0/artists' + id)
         .then(function(response){
             return response.json();
         })
@@ -176,6 +192,84 @@ window.onload = function(){
             console.log(info);
             var genre = document.querySelector(".container-genre");
             genre.style.display = "flex";
+            toAdd=
+            `<div class="genre">
+                <div class="imgContainer">
+                    <img src="${info.picture_big}" alt="">
+                </div>
+                <div class="info">
+                    <h3>${info.name}</h3>
+                    <div class="slider">
+                        <h4>Top artists</h4>
+                        <div class="uk-position-relative uk-visible-toggle uk-light slider-content" tabindex="-1" uk-slider>
+                            <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid">
+                                <li>
+                                    <div class="uk-panel">
+                                        <img src="images/DRAKE.jpeg" alt="">
+                                        <div class="uk-position-center uk-panel"><h1>1</h1></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="uk-panel">
+                                        <img src="images/DRAKE.jpeg" alt="">
+                                        <div class="uk-position-center uk-panel"><h1>2</h1></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="uk-panel">
+                                        <img src="images/DRAKE.jpeg" alt="">
+                                        <div class="uk-position-center uk-panel"><h1>3</h1></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="uk-panel">
+                                        <img src="images/DRAKE.jpeg" alt="">
+                                        <div class="uk-position-center uk-panel"><h1>4</h1></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="uk-panel">
+                                        <img src="images/DRAKE.jpeg" alt="">
+                                        <div class="uk-position-center uk-panel"><h1>5</h1></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="uk-panel">
+                                        <img src="images/DRAKE.jpeg" alt="">
+                                        <div class="uk-position-center uk-panel"><h1>6</h1></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="uk-panel">
+                                        <img src="images/DRAKE.jpeg" alt="">
+                                        <div class="uk-position-center uk-panel"><h1>7</h1></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="uk-panel">
+                                        <img src="images/DRAKE.jpeg" alt="">
+                                        <div class="uk-position-center uk-panel"><h1>8</h1></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="uk-panel">
+                                        <img src="images/DRAKE.jpeg" alt="">
+                                        <div class="uk-position-center uk-panel"><h1>9</h1></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="uk-panel">
+                                        <img src="images/DRAKE.jpeg" alt="">
+                                        <div class="uk-position-center uk-panel"><h1>10</h1></div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>`
         })
         .catch(function(error){
             console.log('el error fue: '+ error);
