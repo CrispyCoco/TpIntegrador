@@ -6,23 +6,19 @@
     padding-top: 60px;
     padding-bottom: 80px    ;
 }
-
+/* cambie el ancho a 100% por que quedaba horrible */
 .content{
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width:100%;
     justify-content: center;
+    column-gap: 20px;
 }
 
 .genre{
-    display: flex;
-    flex-direction: column;
-    margin-left: 5px;
-    margin-right: 5px;
-    width: 30%;
+    width: 100%;
     border-radius: 5px;
-    margin-top: 40px;
-    height: 240px;
+    margin-top: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 5px;
@@ -79,18 +75,10 @@
     font-size: 15px;
 }
 
-<<<<<<< HEAD
-footer ul li a:hover{
-    font-weight: bold;
-}
-.content{
-    display: flex;
-    justify-content: center;
-    background-color: rgb(12, 11, 14);
-}
-
-=======
 .genre:hover{
     background-color: rgba(128, 128, 128, 0.26)
->>>>>>> 678a669f2b3c87aef6c047708cd2abe78b461f49
+}
+footer{
+    position: static;
+    bottom: 0;
 }
