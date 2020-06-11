@@ -10,7 +10,7 @@
     align-items: center;
     flex-direction: column;
     margin-top: 150px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .separation{
     width: 70%;
@@ -115,9 +115,6 @@
     color: white;
 }
 
-#add i{
-    color: white;
-}
 .playlistTrack{
     width: 100%;
     margin-bottom: 60px;
@@ -158,10 +155,18 @@
     margin-left: 20px;
 }
 
+.moreOptions{
+    justify-content: center;
+}
+
 /* ** Animations *** */
 
 #add i:hover{
     color: rgb(75, 26, 171);
+}
+
+.minus:hover{
+    color: red;
 }
 /* cambie la animacion del boton play en el hover */
 

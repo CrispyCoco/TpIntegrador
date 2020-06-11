@@ -16,7 +16,7 @@ window.onload = function(){
                         <div class="trackName tag"><a href="details.html?trackId=${track.id}">${track.title}</a></div>
                         <div class="trackArtist tag notMobile"><a href="details.html?artistId=${track.artist.id}" class="notMobile">${track.artist.name}</a></div>
                         <div class="trackAlbum tag notMobile"><a href="details.html?albumId=${track.album.id}" class="notMobile">${track.album.title}</a></div>
-                        <div class="moreOptions tag"><span class="remove" songId="${id}"><i class="fas fa-ellipsis-h"></i></span></div>
+                        <div class="moreOptions tag"><span class="remove" songId="${id}"><span class="minus" uk-icon="icon: minus-circle"></span></span></div>
                     </div>`;
         }
         playlistTrack.innerHTML += toAdd;
