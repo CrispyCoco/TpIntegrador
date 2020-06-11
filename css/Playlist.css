@@ -10,6 +10,7 @@
     align-items: center;
     flex-direction: column;
     margin-top: 150px;
+    margin-bottom: 20px;
 }
 .separation{
     width: 70%;
@@ -30,7 +31,6 @@
 
 .imgContainer img{
     width: 100%;
-    height: 100%;
 }
 
 .mainInfo{
@@ -120,7 +120,7 @@
 }
 .playlistTrack{
     width: 100%;
-    margin-bottom: 100%;
+    margin-bottom: 60px;
 }
 
 .track{
@@ -226,31 +226,4 @@
     .notMobile{
         display: none;
     }
-.buttons {
-width: 100%;
-display:flex ;
-flex-direction: column ;
-
-}
-.borrar{
-    padding-left: 20px;
-    padding-right: 20px;
-}
-.container{
-    width: 100%;
-    text-align: center;
-}
-
-}
-footer{
-    position: static;
-    bottom: 0;
-}
-.mensajeCanciones{
-    text-align: center;
-    font-family: ;
-}
-.moticon{
-    text-align: center;
-    font-size: xx-large;
 }
