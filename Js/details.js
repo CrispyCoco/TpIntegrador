@@ -227,9 +227,12 @@ window.onload = function(){
                 let albumTitle = data.title;
                 let artistName = data.artist.name;
                 
+                // console.log(data.title);
+                // console.log(artistName);
+                
                 
                 if (albumTitle.length > 30) {
-                    let titlePart = data.album.title.slice(0,29);
+                    let titlePart = data.title.slice(0,29);
                     albumTitle = titlePart + '...';
                     console.log(albumTitle);
                     
@@ -366,3 +369,5 @@ window.onload = function(){
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
+
+// Mio

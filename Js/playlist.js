@@ -1,9 +1,11 @@
 window.onload = function(){
     var playlistTrack = document.querySelector('.playlistTrack');
+    let qTracks = document.querySelector('.titles h5');
+    let tracksAmmount = 0;
 
     playlistTrack.style.display = 'content';
     if (window.localStorage.getItem('ListIds') === null) {
-        
+        qTracks.innerHTML = `${tracksAmmount} tracks`;
     } else {
         let ids= JSON.parse(window.localStorage.getItem('ListIds'));
         let toAdd = ``;
@@ -11,15 +13,39 @@ window.onload = function(){
             const id = ids[i];
             
             let track = JSON.parse(window.localStorage.getItem(`Id ${id}`));
+                let trackTitle = track.title;
+                let albumTitle = track.album.title;
+                let artistName = track.artist.name;
+                console.log(albumTitle.length);
+                
+                if (trackTitle.length > 16) {
+                    let titlePart = trackTitle.slice(0,15);
+                    trackTitle = titlePart + '...';
+                    console.log(trackTitle);
+                }
+                
+                if (albumTitle.length > 16) {
+                    let titlePart = albumTitle.slice(0,15);
+                    albumTitle = titlePart + '...';
+                    console.log(albumTitle);
+                    
+                }
+                if (artistName.length > 16) {
+                    let titlePart = artistName.slice(0,15);
+                    artistName = titlePart + '...';
+                    console.log(artistName);
+                }
             toAdd +=`<div class="track" track="${id}">
                         <div class="albumContainer"><img src="${track.album.cover}" alt="Album cover"></div>
-                        <div class="trackName tag"><a href="details.html?trackId=${track.id}">${track.title}</a></div>
-                        <div class="trackArtist tag notMobile"><a href="details.html?artistId=${track.artist.id}" class="notMobile">${track.artist.name}</a></div>
-                        <div class="trackAlbum tag notMobile"><a href="details.html?albumId=${track.album.id}" class="notMobile">${track.album.title}</a></div>
+                        <div class="trackName tag"><a href="details.html?trackId=${track.id}">${trackTitle}</a></div>
+                        <div class="trackArtist tag notMobile"><a href="details.html?artistId=${track.artist.id}" class="notMobile">${artistName}</a></div>
+                        <div class="trackAlbum tag notMobile"><a href="details.html?albumId=${track.album.id}" class="notMobile">${albumTitle}</a></div>
                         <div class="moreOptions tag"><span class="remove" songId="${id}"><span class="minus" uk-icon="icon: minus-circle"></span></span></div>
                     </div>`;
+            tracksAmmount ++;
         }
         playlistTrack.innerHTML += toAdd;
+        qTracks.innerHTML = `${tracksAmmount} tracks`;
         // console.log(track);
         let removes = document.getElementsByClassName('remove');
         
@@ -54,7 +80,8 @@ window.onload = function(){
                         track.style.display = 'none';
                     }
                 }
-                
+                tracksAmmount --;
+                qTracks.innerHTML = `${tracksAmmount} tracks`
             })
             
         }
@@ -67,6 +94,8 @@ window.onload = function(){
             if (clear) {
                 window.localStorage.clear();
                 playlistTrack.style.display = 'none';
+                tracksAmmount = 0;
+                qTracks.innerHTML = `${tracksAmmount} tracks`
             }
         })
     }
@@ -76,3 +105,5 @@ window.onload = function(){
      console.log(this.cancionId);
     
  }
+
+//  Mio
