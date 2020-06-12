@@ -27,9 +27,9 @@ window.onload = function(){
                 <div class="info">
                     <h3 class="title">${info.title}</h3>
                     <div class="moreInfo">
-                        <a href="artists.html" class="artist">${info.artist.name}</a>
+                        <a href="details.html?artistId=${info.artist.id}" class="artist">${info.artist.name}</a>
                         <p class="sideBar">/</p>
-                        <a href="album.html" class="album">${info.album.title}</a>
+                        <a href="details.html?albumId=${info.album.id}" class="album">${info.album.title}</a>
                     </div>
                     
                     <div class="button">
@@ -126,7 +126,7 @@ window.onload = function(){
                 for (let i = 0; i < artistArray.length; i++) {
                     const element = info.data[i];
 
-                    divColumna+='<li><a href="track.html?id=' + artistArray[i].id + '"' + ' class="music"> ' + artistArray[i].title +'</a></li>';
+                    divColumna+='<li><a href="details.html?trackId=' + artistArray[i].id + '"' + ' class="music"> ' + artistArray[i].title +'</a></li>';
                 
                 }
                 musicol.innerHTML=divColumna;   
@@ -167,7 +167,6 @@ window.onload = function(){
             </div>
             <div class="music">
                     <h5>Tracks</h5>
-                    <div class="track"><a href="track.html">Paranoid</a></div>
                     
             </div>`
             album.innerHTML+=toAdd;
@@ -179,14 +178,14 @@ window.onload = function(){
             .then(function(info){
                 console.log(info);
                 var lista = document.querySelector('.music');
-                let artistArray=info.data
+                let albumArray=info.data
                 var divColumna=''
 
                 for (let i = 0; i < 8; i++) {
                     const element = info.data[i];
 
                     divColumna+= 
-                    '<div class="track"><a href="track.html?id='+ artistArray[i].id +'">'+ artistArray[i].title +'</a></div>';
+                    '<div class="track"><a href="details.html?trackId='+ albumArray[i].id +'">'+ albumArray[i].title +'</a></div>';
                     
                 }
             lista.innerHTML=divColumna;    
