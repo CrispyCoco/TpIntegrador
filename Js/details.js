@@ -121,8 +121,9 @@ window.onload = function(){
                 console.log(info.data);
                 var musicol = document.querySelector(".music ol");
                 let artistArray=info.data
+                var divColumna=''
 
-                for (let i = 0; i < 6; i++) {
+                for (let i = 0; i < artistArray.length; i++) {
                     const element = info.data[i];
 
                     divColumna+='<li><a href="track.html?id=' + artistArray[i].id + '"' + ' class="music"> ' + artistArray[i].title +'</a></li>';
@@ -160,22 +161,41 @@ window.onload = function(){
                     <h3>${info.title}</h3>
                     <div class="moreInfo">
                         <a href="sequel.html" class="artist">${info.artist.name}</a>
-                        <h5>${info.release_date}- 18 canciones, 1h 4min</h5>
+                        <h5>${info.release_date}- ${info.duration}</h5>
                     </div>
                 </div>
             </div>
             <div class="music">
                     <h5>Tracks</h5>
                     <div class="track"><a href="track.html">Paranoid</a></div>
-                    <div class="track"><a href="track.html">Spoil my night</a></div>
-                    <div class="track"><a href="track.html">Rich & Sad</a></div>
-                    <div class="track"><a href="track.html">Zack and Codeine</a></div>
-                    <div class="track"><a href="track.html">Takin' Shots</a></div>
-                    <div class="track"><a href="track.html">Rockstar</a></div>
-                    <div class="track"><a href="track.html">Over Now</a></div>
-                    <div class="track"><a href="track.html">Psycho</a></div>
+                    
             </div>`
             album.innerHTML+=toAdd;
+
+            fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/'+ id +'/tracks')
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(info){
+                console.log(info);
+                var lista = document.querySelector('.music');
+                let artistArray=info.data
+                var divColumna=''
+
+                for (let i = 0; i < 8; i++) {
+                    const element = info.data[i];
+
+                    divColumna+= 
+                    '<div class="track"><a href="track.html?id='+ artistArray[i].id +'">'+ artistArray[i].title +'</a></div>';
+                    
+                }
+            lista.innerHTML=divColumna;    
+            })
+
+            .catch(function(error){
+                console.log('el error fue: '+ error);
+            })
+
         })
         .catch(function(error){
             console.log('el error fue: '+ error);
@@ -184,7 +204,7 @@ window.onload = function(){
         // PAGINA DE GENRE
     }else if (queryStringObj.has('genreId')){
         var id = queryStringObj.get('genreId');
-        fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/0/artists' + id)
+        fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/' + id)
         .then(function(response){
             return response.json();
         })
@@ -205,64 +225,10 @@ window.onload = function(){
                             <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid">
                                 <li>
                                     <div class="uk-panel">
-                                        <img src="images/DRAKE.jpeg" alt="">
-                                        <div class="uk-position-center uk-panel"><h1>1</h1></div>
+                                    
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="uk-panel">
-                                        <img src="images/DRAKE.jpeg" alt="">
-                                        <div class="uk-position-center uk-panel"><h1>2</h1></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="uk-panel">
-                                        <img src="images/DRAKE.jpeg" alt="">
-                                        <div class="uk-position-center uk-panel"><h1>3</h1></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="uk-panel">
-                                        <img src="images/DRAKE.jpeg" alt="">
-                                        <div class="uk-position-center uk-panel"><h1>4</h1></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="uk-panel">
-                                        <img src="images/DRAKE.jpeg" alt="">
-                                        <div class="uk-position-center uk-panel"><h1>5</h1></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="uk-panel">
-                                        <img src="images/DRAKE.jpeg" alt="">
-                                        <div class="uk-position-center uk-panel"><h1>6</h1></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="uk-panel">
-                                        <img src="images/DRAKE.jpeg" alt="">
-                                        <div class="uk-position-center uk-panel"><h1>7</h1></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="uk-panel">
-                                        <img src="images/DRAKE.jpeg" alt="">
-                                        <div class="uk-position-center uk-panel"><h1>8</h1></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="uk-panel">
-                                        <img src="images/DRAKE.jpeg" alt="">
-                                        <div class="uk-position-center uk-panel"><h1>9</h1></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="uk-panel">
-                                        <img src="images/DRAKE.jpeg" alt="">
-                                        <div class="uk-position-center uk-panel"><h1>10</h1></div>
-                                    </div>
-                                </li>
+                                
                             </ul>
                             <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
                             <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
@@ -270,6 +236,33 @@ window.onload = function(){
                     </div>
                 </div>
             </div>`
+            genre.innerHTML+=toAdd;
+
+            fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/' + id + '/artists')
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(info){
+                console.log(info.data);
+                var lista = document.querySelector('.slider ul');
+                let artistArray=info.data
+                var divColumna=''
+
+                for (let i = 0; i < 10; i++) {
+                    const element = info.data[i];
+
+                    divColumna += 
+                    '<li>' +
+                    '<img src="' + artistArray[i].picture_small +'" alt="">' +
+                    '</li>';
+                     
+                }
+                lista.innerHTML=divColumna;
+            })
+            .catch(function(error){
+                console.log('el error fue: '+ error);
+            })
+
         })
         .catch(function(error){
             console.log('el error fue: '+ error);
