@@ -85,50 +85,19 @@ window.onload = function(){
                     let titlePart = title.slice(0,23);
                     title = titlePart + '...';
                 }
+                let artistName = element.artist.name;
+                if (artistName.length > 16) {
+                    let namePart = artistName.slice(0,15);
+                    artistName = namePart + '...';
+                }
                 // console.log(element);
                 
                 toAdd = `<div class="trackBox">
                             <div><a href="details.html?albumId=${element.id}">${title}</a></div>
-                            <div class="fans extraInfo"><a href="details.html?artistId">${element.artist.name}</a></div>
+                            <div class="fans extraInfo"><a href="details.html?artistId=${element.artist.id}">${artistName}</a></div>
                         </div>`;
                 listPodcast.innerHTML += toAdd;
             }
-
-                // const ellipsisElements = document.getElementsByClassName('ellipsis');
-                // // console.log(ellipsisElements);
-                
-                // for (const element of ellipsisElements) {
-                //    console.log(element);
-                   
-                //    element.innerHTML = `<span style>${element.innerText}</span>`;
-                //    const span = element.getElementsByTagName('span')[0];
-                   
-                //    element.addEventListener('mouseover', () => {
-                //       console.log('#');
-                //       const speed = parseInt(element.getAttribute('speed'));
-                //       const length = span.getBoundingClientRect().width - element.getBoundingClientRect().width;
-                //       const time = length / speed;
-                //       span.style.transition = `left ${time}s linear`;
-                //       span.style.left = `-${length}px`;
-                //    });
-             
-                //    element.addEventListener('mouseout', () => {
-                //       span.setAttribute('style', '');
-                //    });
-             
-                //    element.addEventListener('click', () => {
-                //       if (span.getAttribute('style')) {
-                //          span.setAttribute('style', '');
-                //       } else {
-                //          const speed = parseInt(element.getAttribute('speed'));
-                //          const length = span.getBoundingClientRect().width - element.getBoundingClientRect().width;
-                //          const time = length / speed;
-                //          span.style.transition = `left ${time}s linear`;
-                //          span.style.left = `-${length}px`;
-                //       }
-                //    });
-                // }
-
             slider.innerHTML += `<li>
                                     <a href="details.html?trackId=${info.tracks.data[0].id}">
                                         <img src="images/Top track slider.jpg" alt="">
@@ -145,18 +114,6 @@ window.onload = function(){
                                     <a href="details.html?albumId=${info.albums.data[0].id}">
                                         <img src="images/Top Album.jpg" alt="">
                                         <div class="uk-position-center uk-panel"><h1>Best Album</h1></div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="details.html?podcastId=${info.podcasts.data[0].id}">
-                                        <img src="images/Best Podcast.jpg" alt="">
-                                        <div class="uk-position-center uk-panel"><h1>Best Podcast</h1></div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="details.html?playlistId=${info.playlists.data[0].id}">
-                                        <img src="images/Top playlist.jpg" alt="">
-                                        <div class="uk-position-center uk-panel"><h1>Best Playlist</h1></div>
                                     </a>
                                 </li>`
             

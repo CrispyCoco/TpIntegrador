@@ -22,9 +22,9 @@
         <div class="navBar">
             <button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-nav-primary"><span uk-icon="icon: table" class="tableIcon"></span></button>
 
-            <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
-                <div class="uk-offcanvas-bar uk-flex uk-flex-column">
-                    <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true" >
+                <div class="uk-offcanvas-bar uk-flex uk-flex-column" >
+                    <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical" >
                         <li class="uk-active"><a href="home.html"><img src="images/Group 8.svg" alt=""></a></li>
                         <li class="uk-nav-header">Categories</li>
                         <li><a href="home.html" class="hover"><span class="uk-margin-small-right" uk-icon="icon: home"></span> Home</a></li>
@@ -47,10 +47,13 @@
             </ul>
         </div>
         <div class="buscador">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="Search..">
+            <form action="search.html" method="GET">
+                <!-- <i class="fas fa-search"></i> -->
+                <input type="text" placeholder="Search.." name="search">
+            </form>
         </div>
     </header>
+    
     <div class="container">
 
     <div class="conjunto">

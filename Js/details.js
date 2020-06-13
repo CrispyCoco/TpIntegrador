@@ -82,10 +82,21 @@ window.onload = function(){
                                 </div>
                             </div>`;
                 track.innerHTML += toAdd;
-                track.style.display = 'flex';
-
                 let add = document.querySelector('.add');
                 let added = document.querySelector('.added');
+                if (window.localStorage.getItem('ListIds') === null) {
+                    
+                } else{
+                    let ids = JSON.parse(window.localStorage.getItem('ListIds'));
+                    ids.forEach(id => {
+                        if (id == data.id) {
+                            added.style.display = "block";
+                            add.style.display = "none";
+                        }
+                    });
+                }
+                track.style.display = 'flex';
+
                 add.addEventListener('click', function(){
 
                     window.localStorage.setItem(`Id ${data.id}`, JSON.stringify(data));

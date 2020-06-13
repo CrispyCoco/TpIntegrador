@@ -34,6 +34,7 @@
     justify-content: space-around;
     align-items: center;
     margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 .artist{
@@ -75,7 +76,6 @@
 
 .artist .imgContainer img{
     height: 100%;
-    width: 72%;
     border-radius: 50%;
 }
 
@@ -103,7 +103,7 @@
     /* border: solid 2px green; */
     width: 70%;
     align-self: center;
-    /* justify-content: flex-start; */
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 40px;
@@ -112,11 +112,11 @@
 
 .trackLink{
     height: 210px;
-    width: 21%;
+    width: 30%;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
+    /* margin-left: 12px;
+    margin-right: 12px; */
     padding-top: 10px;
     text-decoration-line: none;
 }
@@ -128,7 +128,7 @@
 }
 
 .track .imgContainer{
-    height: 70%;
+    height: 140px;
     width: 80%;
     display: flex;
     justify-content: center;
@@ -136,7 +136,6 @@
 
 .track .imgContainer img{
     height: 100%;
-    width: 100%;
 }
 
 .track h4{
@@ -151,7 +150,7 @@
     color: gray;
     font-family: 'Muli', sans-serif;
     margin: 0;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .track-link{
@@ -174,7 +173,7 @@
 }
 
 .album .imgContainer{
-    height: 70%;
+    height: 140px;
     width: 80%;
     display: flex;
     justify-content: center;
@@ -185,28 +184,31 @@
     /* border: solid 2px green; */
     width: 70%;
     align-self: center;
-    /* justify-content: flex-start; */
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 40px;
     padding: 0 20px;
 }
 
-.album{
+.albumLink{
     height: 210px;
-    width: 21%;
+    width: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* margin-left: 15px;
+    margin-right: 15px; */
+    padding-top: 10px;
+    text-decoration-line: none;
+}
+
+.album{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
-    padding-top: 10px;
 }
 .album .imgContainer img{
     height: 100%;
-    width: 100%;
 }
 
 .album h4{
@@ -242,7 +244,13 @@
     text-decoration-line: white;
     font-weight: bold;
 }
-.album:hover{
+.albumLink:hover{
     background-color: rgba(128, 128, 128, 0.26);
+}
+
+.album h4:hover{
+    text-decoration: underline;
+    text-decoration-line: white;
+    font-weight: bold;
 }
 /* Mio */

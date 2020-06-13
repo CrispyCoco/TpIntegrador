@@ -13,10 +13,12 @@ window.onload = function(){
             const id = ids[i];
             
             let track = JSON.parse(window.localStorage.getItem(`Id ${id}`));
+            console.log(track);
+            
+                console.log(track.title);
                 let trackTitle = track.title;
                 let albumTitle = track.album.title;
                 let artistName = track.artist.name;
-                console.log(albumTitle.length);
                 
                 if (trackTitle.length > 16) {
                     let titlePart = trackTitle.slice(0,15);
