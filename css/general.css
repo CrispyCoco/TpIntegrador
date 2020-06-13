@@ -155,6 +155,7 @@ footer .author{
 
 .deezer{
     height: 40px;
+    margin-right: 10px;
 }
 footer .author:hover{
     font-weight: bold;
