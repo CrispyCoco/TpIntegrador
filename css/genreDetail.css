@@ -108,6 +108,10 @@
     text-decoration-line: none;
 }
 
+.genre .top-artist{
+    display: none;
+}
+
 @media only screen and (max-width: 768px){
     .genre{
         width: 100%;
@@ -142,20 +146,74 @@
 }
 
 @media only screen and (max-width: 420px){
-
-    .genre .imagen{
-        height: 80%;
+    
+    .container-genre{
+        height: auto;
     }
-    .genre .moreInfo{
-        margin-left: 35px;
+    .genre{
+        height: auto;
+        display: flex;
+        flex-direction: column;
     }
-    .genre .duration{
-        margin-right: 0;
-        margin-left: 30px;
+    .genre .slider{
+        display: none;
     }
-
+    .genre .imgContainer{
+        height: 350px;
+    }
+    .genre .imgContainer img{
+        height: 82%;
+        width: 90%;
+    }
     .genre .info h3{
-        margin-left: 30px;
+        margin: 0;
+    }
+    
+    .genre .mobile{
+        margin-top: 40px;
+    }
+    .genre .top-artist{
+        height: 289px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        /* margin-top: 20px; */
+    }
+
+    .genre .top-artist a{
+        height: 100%;
+        width: 100%;
+    }
+    .genre .top-artist .img-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70%;
+    }
+
+    .genre .top-artist .img-container img{
+        height: 90%;
+        width: 63%;
+        border-radius: 50%;
+    }
+
+    .genre .top-artist .artistName{
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .genre .top-artist:hover{
+        background-color: rgba(128, 128, 128, 0.26);
+    }
+
+    .genre .top-artist a:hover{
+        text-decoration-line: none;
+    }
+
+    .genre .top-artist .artistName:hover{
+        font-weight: bold;
+        text-decoration: underline;
     }
 }
 

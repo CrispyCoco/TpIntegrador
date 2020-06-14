@@ -324,10 +324,14 @@ window.onload = function(){
                                         <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
                                     </div>
                                 </div>
+                                <div class="mobile">
+                                    
+                                </div>
                             </div>
                         </div>`;
             genre.innerHTML += toAdd;
             var sliderUl = document.querySelector('.slider-ul');
+            var mobile = document.querySelector('.mobile');
             genre.style.display = 'flex';
             
             fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/' + id + '/artists')
@@ -337,7 +341,7 @@ window.onload = function(){
                 
                 .then(function(data){
                     console.log(data);
-                    
+                    let addMobile = ``;
                     let addArtist = ``;
                     for (let i = 0; i < 10; i++) {
                         const element = data.data[i];
@@ -348,10 +352,18 @@ window.onload = function(){
                                                 <h4>${element.name}</h4>
                                             </div>
                                         </a>
-                                    </li>`
-                        
-                    }
+                                    </li>`;
 
+                        addMobile += ` <div class="top-artist">
+                                        <a href="details.html?artistId=${element.id}">
+                                            <div class="img-container">
+                                                <img src="${element.picture_big}" alt="">
+                                            </div>
+                                            <h4 class="artistName">${element.name}</h4>
+                                        </a>
+                                    </div>`;
+                    }
+                    mobile.innerHTML += addMobile;
                     sliderUl.innerHTML += addArtist;
                 })
                 

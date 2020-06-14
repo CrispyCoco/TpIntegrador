@@ -61,6 +61,8 @@
     height: 210px;
     width: 30%;
     text-decoration-line: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
 } 
 
 /* .artist a .imgContainer{
@@ -252,5 +254,34 @@
     text-decoration: underline;
     text-decoration-line: white;
     font-weight: bold;
+}
+
+@media only screen and (max-width: 768px){
+    
+    /* footer{
+        margin-top: 30px;
+    }
+     */
+}
+/* celular responsive */
+
+@media only screen and (max-width: 420px){
+    .artistLink{
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
+    .trackLink{
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
+    .albumLink{
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
 }
 /* Mio */

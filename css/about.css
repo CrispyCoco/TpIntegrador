@@ -23,18 +23,17 @@
     justify-content: center;
 }
 .imgContainer img{
-    height: 80%;
-    width: 80%;
-
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
 }
 
 .info h3{
     font-family: 'Raleway', sans-serif;
     color: white;
     font-size: 30px;
-    position: relative;
-    left: 30px;
-    top: 40px;
+    margin-top: 60px;
+    margin-left: 30px;
 }
 
 .info{
@@ -53,6 +52,30 @@
 .description p{
     color: white;
     font-family: 'Muli', sans-serif;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
+@media only screen and (max-width: 768px){
+    
+    .imgContainer img{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 420px){
+
+    .general{
+        grid-template-columns: none;
+        grid-template-rows: 50% 50%;
+        height: auto;
+        padding-bottom: 40px;
+        padding-top: 20px;
+    }
+    
+    .description{
+        margin-top: 0;
+    }
+}
 /* Mio */

@@ -192,11 +192,34 @@
 
 @media only screen and (max-width: 420px){
 
-    .album .imgContainer img{
-        height: 80%;
+    .album{
+        height: 500px;
+        grid-template-rows: 70% 30%;
     }
-    .album .moreInfo{
-        margin-left: 35px;
+    .album .imgContainer img{
+        height: 90%;
+        width: 90%;
+    }
+    .album .info .title{
+        align-items: flex-start;
+        /* height: 40px; */
+        justify-content: center;
+    }
+    .album .info h3{
+        margin: 0;
+    }
+
+    .album .info .moreInfo{
+        margin: 0;
+        align-items: center;
+    }
+
+    .album .moreInfo .artistName{
+        margin: 0;
+    }
+
+    .album .moreInfo h5{
+        margin: 0;
     }
     .album .duration{
         margin-right: 0;
@@ -208,9 +231,12 @@
         justify-content: center;
         margin-right: 10px;
     }
-    .album .info h3{
-        margin-left: 30px;
+
+    .container-album .music .track{
+        width: 100%;
+        justify-content: center;
     }
+   
 }
 
 /* Mio */
