@@ -125,19 +125,19 @@ window.onload = function(){
                                         <img src="${element.cover_big}" alt="">
                                     </div>
                                     <h4>${element.title}</h4>
-                                    <p>${element.artist.name} | ${durationMin} : ${durationSec}</p>
+                                    <p>${element.artist.name} | ${element.nb_tracks} tracks</p>
                                 </div>
                             </a>`;
                 }
             } else {
                 data.data.forEach(element => {
-                    toAdd += `<a href="details.html?trackId=${element.id}" class="trackLink">
-                                <div class="track">
+                    toAdd += `<a href="details.html?albumId=${element.id}" class="albumLink">
+                                <div class="album">
                                     <div class="imgContainer">
                                         <img src="${element.cover_big}" alt="">
                                     </div>
                                     <h4>${element.title}</h4>
-                                    <p>${element.artist.name} | ${durationMin} : ${durationSec}</p>
+                                    <p>${element.artist.name} | ${element.release_date}</p>
                                 </div>
                             </a>`;
                 });
