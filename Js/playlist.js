@@ -40,9 +40,12 @@ window.onload = function(){
             toAdd +=`<div class="track" track="${id}">
                         <div class="albumContainer"><img src="${track.album.cover}" alt="Album cover"></div>
                         <div class="trackName tag"><a href="details.html?trackId=${track.id}">${trackTitle}</a></div>
+                        <div><audio src="${track.preview}" controls></audio></div>
                         <div class="trackArtist tag notMobile"><a href="details.html?artistId=${track.artist.id}" class="notMobile">${artistName}</a></div>
                         <div class="trackAlbum tag notMobile"><a href="details.html?albumId=${track.album.id}" class="notMobile">${albumTitle}</a></div>
                         <div class="moreOptions tag"><span class="remove" songId="${id}"><span class="minus" uk-icon="icon: minus-circle"></span></span></div>
+                        
+
                     </div>`;
             tracksAmmount ++;
         }

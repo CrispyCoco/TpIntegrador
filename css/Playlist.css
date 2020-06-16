@@ -121,7 +121,7 @@
     width: 100%;
     height: 60px;
     display: grid;
-    grid-template-columns: 5% 50% 20% 20% 5%;
+    grid-template-columns: 5% 30% 20% 20% 20% 5%;
     border: solid 1px rgba(128, 128, 128, 0.26);
     border-right: none;
     border-left: none;
