@@ -121,7 +121,7 @@
     width: 100%;
     height: 60px;
     display: grid;
-    grid-template-columns: 5% 30% 20% 20% 20% 5%;
+    grid-template-columns: 5% 50% 20% 20% 5%;
     border: solid 1px rgba(128, 128, 128, 0.26);
     border-right: none;
     border-left: none;
@@ -134,11 +134,27 @@
 .albumContainer{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .albumContainer img{
     height: 50px;
     width: 100%;
 
+}
+
+.play-button{
+    height: 30px;
+    width: 30px;
+}
+
+.play-button svg{
+    height: 30px;
+    width: 30px;
+    color: white;
+}
+
+.play-button svg polygon{
+    fill: white;
 }
 
 .tag{
@@ -179,7 +195,9 @@
 .track:hover{
     background-color: rgba(128, 128, 128, 0.26);
 }
-
+.albumContainer img:hover{
+    display: none;
+}
 .tag a:hover{
     font-weight: bold;
     text-decoration: underline;

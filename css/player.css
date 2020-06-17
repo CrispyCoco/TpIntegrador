@@ -1,0 +1,14 @@
+footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.track-player{
+    width: 100%;
+    /* display: none; */
+    /* position: fixed; */
+}
+
+.track-player iframe{
+    width: 100%;
+}

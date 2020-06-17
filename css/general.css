@@ -125,28 +125,32 @@ header img{
 }
 
 footer{
+    background-color: black;
+    /* position: fixed; */
+}
+
+.info-footer{
     display: flex;
     height: 100px;
     width: 100%;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    background-color: black;
 }
 
-footer .deezer img{
+.info-footer .deezer img{
     width: 100px;
     height: 40px;
 }
 
-footer ul{
+.info-footer ul{
     margin: 0;
 }
-footer ul li{
+.info-footer ul li{
     list-style-type: none;
 }
 
-footer .author{
+.info-footer .author{
     text-decoration: none;
     color: white;
     text-transform: capitalize;
@@ -157,7 +161,7 @@ footer .author{
     height: 40px;
     margin-right: 10px;
 }
-footer .author:hover{
+.info-footer .author:hover{
     font-weight: bold;
     color: white;
 }

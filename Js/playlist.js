@@ -38,9 +38,8 @@ window.onload = function(){
                     console.log(artistName);
                 }
             toAdd +=`<div class="track" track="${id}">
-                        <div class="albumContainer"><img src="${track.album.cover}" alt="Album cover"></div>
+                        <div class="albumContainer" track="${id}"><span uk-icon="icon: play" class="play-button"></span><img src="${track.album.cover}" alt="Album cover"></div>
                         <div class="trackName tag"><a href="details.html?trackId=${track.id}">${trackTitle}</a></div>
-                        <div><audio src="${track.preview}" controls></audio></div>
                         <div class="trackArtist tag notMobile"><a href="details.html?artistId=${track.artist.id}" class="notMobile">${artistName}</a></div>
                         <div class="trackAlbum tag notMobile"><a href="details.html?albumId=${track.album.id}" class="notMobile">${albumTitle}</a></div>
                         <div class="moreOptions tag"><span class="remove" songId="${id}"><span class="minus" uk-icon="icon: minus-circle"></span></span></div>
@@ -93,6 +92,8 @@ window.onload = function(){
         
 // Clear **************************************************************************************************
         let more = document.getElementById('more');
+        let trackPlayer = document.querySelector('.track-player');
+
 
         more.addEventListener('click', function(){
             let clear = confirm('Estas seguro que queres borrar la playlist?');
@@ -100,9 +101,26 @@ window.onload = function(){
                 window.localStorage.clear();
                 playlistTrack.style.display = 'none';
                 tracksAmmount = 0;
-                qTracks.innerHTML = `${tracksAmmount} tracks`
+                qTracks.innerHTML = `${tracksAmmount} tracks`;
+                trackPlayer.innerHTML = ``;
             }
         })
+
+// Play*******************************************************************************************************
+
+        let footer = document.querySelector('.footer');
+        let trackList = document.getElementsByClassName('albumContainer')
+
+        for (let i = 0; i < trackList.length; i++) {
+            const track = trackList[i];
+            let trackId = track.getAttribute('track');
+            track.addEventListener('click', function(){
+                trackPlayer.innerHTML = `<iframe scrolling="yes" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=true&playlist=true&width=1350&height=350&color=4b1aab&layout=dark&size=medium&type=tracks&id=${trackId}&app_id=1" width="1350" height="92" class="player"></iframe>`
+                // footer.style.display = 'none';
+            })
+        }
+
+
     }
 }
 
