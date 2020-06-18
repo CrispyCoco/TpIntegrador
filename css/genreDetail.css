@@ -14,10 +14,10 @@
 .genre{
     margin-top: 30px;
     margin-bottom: 30px;
-    width: 1200px;
+    width: 96%;
     height: 500px;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
     margin: 0;
     margin-left: 40px;
 }
@@ -33,7 +33,7 @@
 
 .genre .imgContainer img{
     width: 90%;
-    height: 90%;
+    /* height: 90%; */
     position: absolute;
     z-index: 20;
 }
@@ -60,6 +60,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
+    width: 100%;
 }
 
 .genre .slider-content{
@@ -74,10 +75,12 @@
     align-items: center;
     padding-left: 30px;
     padding-right: 10px;
+    width: 100%;
 }
 
 .genre .slider-content ul{
     height: 100%;
+    width: 100%;
 }
 
 .genre .uk-grid>*{
@@ -125,10 +128,69 @@
 
     .genre .imgContainer{
         margin-bottom: 20px;
+        height: 400px;
     }
     .genre .imgContainer img{
         width: 60%;
         height: 100%;
+    }
+    .genre{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .genre .slider{
+        display: none;
+    }
+
+    .genre .mobile{
+        margin-top: 40px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .genre .top-artist{
+        height: 289px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        /* margin-top: 20px; */
+    }
+
+    .genre .top-artist a{
+        height: 100%;
+        width: 100%;
+    }
+    .genre .top-artist .img-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70%;
+    }
+
+    .genre .top-artist .img-container img{
+        height: 90%;
+        width: 63%;
+        border-radius: 50%;
+    }
+
+    .genre .top-artist .artistName{
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .genre .top-artist:hover{
+        background-color: rgba(128, 128, 128, 0.26);
+    }
+
+    .genre .top-artist a:hover{
+        text-decoration-line: none;
+    }
+
+    .genre .top-artist .artistName:hover{
+        font-weight: bold;
+        text-decoration: underline;
     }
 
     .genre .info{
@@ -150,14 +212,7 @@
     .container-genre{
         height: auto;
     }
-    .genre{
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    }
-    .genre .slider{
-        display: none;
-    }
+    
     .genre .imgContainer{
         height: 350px;
     }
@@ -171,6 +226,7 @@
     
     .genre .mobile{
         margin-top: 40px;
+        grid-template-columns: 1fr;
     }
     .genre .top-artist{
         height: 289px;
