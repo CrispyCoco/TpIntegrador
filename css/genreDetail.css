@@ -170,7 +170,7 @@
 
     .genre .top-artist .img-container img{
         height: 90%;
-        width: 63%;
+        /* width: 63%; */
         border-radius: 50%;
     }
 
