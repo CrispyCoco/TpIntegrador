@@ -182,6 +182,10 @@ footer{
     color: white;
 }
 
+.media a span:hover{
+    color: rgb(75, 26, 171);
+}
+
 @media only screen and (max-width: 768px){
     header img{
         height: 70px;
