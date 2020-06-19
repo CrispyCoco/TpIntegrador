@@ -139,6 +139,11 @@ footer{
     width: 20%;
     /* flex-direction: column; */
     align-items: center;
+    justify-content: center;
+}
+
+.media a{
+    margin: auto 10px;
 }
 .info-footer{
     display: flex;
