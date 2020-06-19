@@ -169,16 +169,31 @@
     }
 
     .album .info h3{
-        margin-left: 160px;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
 
     }
     .album .music{
         justify-content: center;
     }
     .album .moreInfo{
-        justify-content: flex-start;
+        justify-content: center;
         margin-right: 0;
-        margin-left: 60px;
+        /* margin-left: 60px; */
+    }
+
+    .album .moreInfo .artistName{
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .album .moreInfo h5{
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
     }
 
     .album .duration{
