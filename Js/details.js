@@ -42,8 +42,8 @@ window.onload = function(){
                 let artistName = data.artist.name;
                 // console.log(trackTitle.length);
                 
-                if (trackTitle.length > 30) {
-                    let titlePart = data.title.slice(0,29);
+                if (trackTitle.length > 15) {
+                    let titlePart = data.title.slice(0,14);
                     trackTitle = titlePart + '...';
                     console.log(trackTitle);
                 }
@@ -56,7 +56,7 @@ window.onload = function(){
                 }
                 if (artistName.length > 30) {
                     let titlePart = data.artist.name.slice(0,29);
-                    albumTitle = titlePart + '...';
+                    artistName = titlePart + '...';
                     console.log(artistName);
                 }
                 toAdd = `<div class="track">
@@ -137,7 +137,7 @@ window.onload = function(){
                 let artistName = data.name;
                 if (artistName.length > 30) {
                     let titlePart = data.name.slice(0,29);
-                    albumTitle = titlePart + '...';
+                    artistName = titlePart + '...';
                     console.log(artistName);
                 }
 
@@ -242,15 +242,15 @@ window.onload = function(){
                 // console.log(artistName);
                 
                 
-                if (albumTitle.length > 30) {
-                    let titlePart = data.title.slice(0,29);
+                if (albumTitle.length > 15) {
+                    let titlePart = data.title.slice(0,14);
                     albumTitle = titlePart + '...';
                     console.log(albumTitle);
                     
                 }
                 if (artistName.length > 30) {
                     let titlePart = data.artist.name.slice(0,29);
-                    albumTitle = titlePart + '...';
+                    artistName = titlePart + '...';
                     console.log(artistName);
                 }
 
