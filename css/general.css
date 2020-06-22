@@ -224,6 +224,15 @@ footer{
         height: 50px;
         width: 70px;
     }
+
+    .info-footer{
+        width: 90%;
+    }
+
+    .media{
+        width: 10%;
+        flex-direction: column;
+    }
 }
 
 /* Mio */
